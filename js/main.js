@@ -218,21 +218,19 @@ function setupMobileMenu() {
 
 function setupStatementReveal() {
   const statement = document.querySelector('.statement__text');
-  if (!statement) return;
+  const highlight = statement?.querySelector('mark');
+  if (!highlight) return;
 
-  const revealWhenVisible = () => {
-    const bounds = statement.getBoundingClientRect();
-    const visible = bounds.top < window.innerHeight * 0.92 && bounds.bottom > window.innerHeight * 0.08;
-    if (!visible && !statement.classList.contains('is-visible')) return;
+  if (!('IntersectionObserver' in window)) {
+    highlight.classList.add('is-animating');
+    return;
+  }
 
-    statement.classList.add('is-visible');
-    window.removeEventListener('scroll', revealWhenVisible);
-    window.removeEventListener('resize', revealWhenVisible);
-  };
+  const observer = new IntersectionObserver(([entry]) => {
+    highlight.classList.toggle('is-animating', entry.isIntersecting);
+  }, { threshold: 0.5 });
 
-  window.addEventListener('scroll', revealWhenVisible, { passive: true });
-  window.addEventListener('resize', revealWhenVisible);
-  revealWhenVisible();
+  observer.observe(highlight);
 }
 
 /* --------------------------------------------------------------------------
