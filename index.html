@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ Título de la pestaña y descripción para Google -->
+  <title>Alinette Galdames — ALITAS · Ideas que dan alas</title>
+  <meta name="description" content="Portafolio de Alinette Galdames, diseñadora gráfica en formación. UX/UI, Branding y Packaging.">
+
+  <!-- Tipografías: Montserrat (titulares) y Nunito Sans (textos) desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Esta línea avisa al CSS que JavaScript está activo (así las animaciones
+       solo esconden contenido si de verdad se van a ejecutar). No la borres. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<!-- La clase "is-loading" se quita sola con JavaScript cuando termina la animación de entrada -->
+<body class="is-loading">
+
+  <!-- =========================================================
+       0. CORTINA DE ENTRADA (intro breve al cargar la página)
+       ========================================================= -->
+  <div class="intro" aria-hidden="true">
+    <span class="intro__word">Ideas que dan alas</span>
+  </div>
+
+  <!-- Enlace oculto para quienes navegan con teclado -->
+  <a class="skip-link" href="#proyectos">Saltar a los proyectos</a>
+
+  <!-- =========================================================
+       1. NAVEGACIÓN
+       ========================================================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+
+      <a href="#inicio" class="nav__logo" aria-label="ALITAS, volver al inicio">
+        <img src="img/logo-alitas.svg" alt="" class="nav__logo-img">
+      </a>
+
+      <!-- Enlaces del menú (escritorio). ✏️ Puedes cambiar los textos -->
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#proyectos" class="nav__link"><span data-hover="Proyectos">Proyectos</span></a>
+        <a href="#sobre-mi"  class="nav__link"><span data-hover="Sobre mí">Sobre mí</span></a>
+        <a href="#contacto"  class="nav__link"><span data-hover="Contacto">Contacto</span></a>
+      </nav>
+
+      <a href="#contacto" class="nav__cta">Hablemos</a>
+
+      <!-- Botón hamburguesa (solo se ve en celular) -->
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú de celular a pantalla completa -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Menú móvil">
+      <a href="#proyectos"><small>01</small>Proyectos</a>
+      <a href="#sobre-mi"><small>02</small>Sobre mí</a>
+      <a href="#contacto"><small>03</small>Contacto</a>
+    </nav>
+    <p class="mobile-menu__foot">Ideas que dan alas</p>
+  </div>
+
+
+  <main>
+
+    <!-- =========================================================
+         2. HERO / PORTADA
+         data-bg = color de fondo que toma la página en esta sección
+         (opciones: white, beige, blue, black — definidas en el CSS)
+         ========================================================= -->
+    <section class="hero" id="inicio" data-bg="white">
+
+      <!-- Fila superior con datos -->
+      <div class="hero__meta">
+        <p class="hero__meta-item reveal-fade">Diseñadora gráfica<br>en formación</p>
+        <p class="hero__meta-item reveal-fade">UX/UI · Branding · Packaging</p>
+        <p class="hero__meta-item hero__meta-item--right reveal-fade">Portafolio<br><span class="js-year">2026</span></p>
+      </div>
+
+      <!-- NOMBRE GRANDE
+           Cada línea va dentro de <span class="line"><span>…</span></span>
+           para que la animación la haga "subir" desde una máscara. -->
+      <h1 class="hero__title" aria-label="Alinette Galdames">
+        <span class="line"><span>Alinette</span></span>
+        <span class="line line--indent">
+          <span>
+            <!-- Píldora visual entre las palabras (inspirada en titulares con imágenes) -->
+            <i class="hero__pill" aria-hidden="true"><b></b></i>Galdames
+          </span>
+        </span>
+      </h1>
+
+      <!-- Imagen grande del hero, desplazada a la derecha -->
+      <figure class="hero__media reveal-img" data-parallax="0.08">
+        <!-- ✏️ IMAGEN DEL HERO
+             Borra el <div class="ph">…</div> y pon:
+             <img src="img/hero.jpg" alt="Describe tu imagen"> -->
+        <div class="ph ph--hero">
+          <span class="ph__shape ph__shape--sun"></span>
+          <span class="ph__shape ph__shape--arc"></span>
+          <span class="ph__label">Imagen hero · 4:5</span>
+        </div>
+      </figure>
+
+      <!-- Bloque con el concepto de marca -->
+      <div class="hero__claim">
+        <img src="img/isotipo-alitas.svg" alt="" class="iso-img iso-slot--float" aria-hidden="true">
+        <p class="hero__claim-text reveal-up">
+          <em>Ideas que</em><br>dan alas
+        </p>
+      </div>
+
+      <a href="#proyectos" class="hero__scroll reveal-fade" aria-label="Ir a los proyectos">
+        <span>Ver proyectos</span>
+        <span class="hero__scroll-arrow">↓</span>
+      </a>
+    </section>
+
+
+    <!-- =========================================================
+         3. FRANJA EN MOVIMIENTO (marquee)
+         ✏️ Cambia las palabras si quieres. El texto está repetido
+         dos veces para que el loop no se corte.
+         ========================================================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>UX/UI</span><i></i><span>Branding</span><i></i><span>Packaging</span><i></i><span>Ideas que dan alas</span><i></i>
+        <span>UX/UI</span><i></i><span>Branding</span><i></i><span>Packaging</span><i></i><span>Ideas que dan alas</span><i></i>
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         4. FRASE DECLARACIÓN (cambio de ritmo: solo texto grande)
+         ✏️ Reescribe esta frase con tu propia voz
+         ========================================================= -->
+    <section class="statement" data-bg="white">
+      <h2 class="statement__text">
+        <span class="line"><span>Diseño marcas, envases</span></span>
+        <span class="line"><span>y experiencias digitales</span></span>
+        <span class="line"><span>para que las ideas</span></span>
+        <span class="line"><span><mark>despeguen.</mark></span></span>
+      </h2>
+    </section>
+
+
+    <!-- =========================================================
+         5. GALERÍA DE PROYECTOS
+         Cada proyecto tiene un formato distinto:
+         .project--wide (panorámico), .project--tall (vertical),
+         .project--square (cuadrado con número gigante).
+         Cada proyecto enlaza a su página: cinefilo.html, lafken.html y chancho-en-piedra.html
+         ========================================================= -->
+    <section class="work" id="proyectos" data-bg="white">
+
+      <header class="work__head">
+        <h2 class="work__title">
+          <span class="line"><span>Proyectos</span></span>
+        </h2>
+        <p class="work__count reveal-fade">( 03 )</p>
+      </header>
+
+      <div class="work__grid">
+
+        <!-- PROYECTO 01 — CINÉFILO -->
+        <article class="project project--wide">
+          <a href="cinefilo.html" class="project__link" aria-label="Ver caso Cinéfilo">
+            <figure class="project__media reveal-img">
+              <!-- ✏️ Imagen: <img src="img/cinefilo.jpg" alt="Interfaz de Cinéfilo"> -->
+              <div class="ph ph--cinefilo">
+                <span class="ph__ui ph__ui--bar"></span>
+                <span class="ph__ui ph__ui--card"></span>
+                <span class="ph__ui ph__ui--card"></span>
+                <span class="ph__ui ph__ui--card"></span>
+                <span class="ph__label">Imagen Cinéfilo · 16:10</span>
+              </div>
+            </figure>
+            <div class="project__info">
+              <span class="project__num">01</span>
+              <h3 class="project__name">Cinéfilo</h3>
+              <p class="project__cat">UX/UI · Plataforma web</p>
+              <!-- ✏️ Descripción corta del proyecto -->
+              <p class="project__desc">Plataforma para compartir opiniones, reseñas y experiencias sobre películas.</p>
+              <span class="project__cta" aria-hidden="true">
+                <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
+                <span class="project__cta-arrow">→</span>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <!-- PROYECTO 02 — LAFKEN -->
+        <article class="project project--tall">
+          <a href="lafken.html" class="project__link" aria-label="Ver caso Lafken">
+            <figure class="project__media reveal-img">
+              <!-- ✏️ Imagen: <img src="img/lafken.jpg" alt="Packaging Lafken"> -->
+              <div class="ph ph--lafken">
+                <span class="ph__wave"></span>
+                <span class="ph__wave ph__wave--2"></span>
+                <span class="ph__box"></span>
+                <span class="ph__label">Imagen Lafken · 3:4</span>
+              </div>
+            </figure>
+            <div class="project__info">
+              <span class="project__num">02</span>
+              <h3 class="project__name">Lafken</h3>
+              <p class="project__cat">Packaging</p>
+              <span class="project__cta" aria-hidden="true">
+                <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
+                <span class="project__cta-arrow">→</span>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <!-- PROYECTO 03 — CHANCHO EN PIEDRA -->
+        <article class="project project--square">
+          <!-- Número gigante decorativo al costado -->
+          <span class="project__bignum" aria-hidden="true">03</span>
+          <a href="chancho-en-piedra.html" class="project__link" aria-label="Ver caso Chancho en Piedra">
+            <figure class="project__media reveal-img">
+              <!-- ✏️ Imagen: <img src="img/chancho-en-piedra.jpg" alt="Vinilo Chancho en Piedra"> -->
+              <div class="ph ph--vinilo">
+                <span class="ph__record"></span>
+                <span class="ph__sleeve"></span>
+                <span class="ph__label">Imagen Chancho en Piedra · 1:1</span>
+              </div>
+            </figure>
+            <div class="project__info">
+              <span class="project__num">03</span>
+              <h3 class="project__name">Chancho en Piedra</h3>
+              <p class="project__cat">Identidad visual · Álbum / Vinilo</p>
+              <span class="project__cta" aria-hidden="true">
+                <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
+                <span class="project__cta-arrow">→</span>
+              </span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         6. SOBRE MÍ (fondo beige — cambio de ritmo cálido)
+         ========================================================= -->
+    <section class="about" id="sobre-mi" data-bg="beige">
+
+      <div class="about__photo-wrap">
+        <figure class="about__photo reveal-img">
+          <!-- ✏️ FOTO PERSONAL: <img src="img/alinette.jpg" alt="Retrato de Alinette Galdames"> -->
+          <div class="ph ph--portrait">
+            <span class="ph__label">Tu fotografía · 4:5</span>
+          </div>
+        </figure>
+
+        <!-- Sello giratorio con el isotipo al centro -->
+        <div class="badge" aria-hidden="true">
+          <svg class="badge__ring" viewBox="0 0 200 200">
+            <defs>
+              <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+            </defs>
+            <text>
+              <textPath href="#circlePath">Ideas que dan alas · Ideas que dan alas · </textPath>
+            </text>
+          </svg>
+          <img src="img/isotipo-alitas.svg" alt="" class="iso-img" aria-hidden="true">
+        </div>
+      </div>
+
+      <div class="about__content">
+        <h2 class="about__title">
+          <span class="line"><span>Hola, soy</span></span>
+          <span class="line"><span>Alinette.</span></span>
+        </h2>
+
+        <!-- ✏️ ESCRIBE AQUÍ TU PRESENTACIÓN (2 a 4 líneas) -->
+        <p class="about__text reveal-up">
+          [Escribe aquí una breve presentación: quién eres, qué estudias,
+          qué te mueve del diseño y qué tipo de proyectos te gustaría hacer.]
+        </p>
+
+        <!-- Habilidades. ✏️ Agrega o quita <li> -->
+        <div class="skills">
+          <div class="skills__col reveal-up">
+            <h3 class="skills__title">Áreas</h3>
+            <ul>
+              <li>UX/UI</li>
+              <li>Branding</li>
+              <li>Packaging</li>
+            </ul>
+          </div>
+          <div class="skills__col reveal-up">
+            <h3 class="skills__title">Herramientas</h3>
+            <ul>
+              <li>[Herramienta]</li>
+              <li>[Herramienta]</li>
+              <li>[Herramienta]</li>
+            </ul>
+          </div>
+          <div class="skills__col reveal-up">
+            <h3 class="skills__title">Me interesa</h3>
+            <ul>
+              <li>[Interés]</li>
+              <li>[Interés]</li>
+              <li>[Interés]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         7. CONTACTO (cierre azul a pantalla completa)
+         ========================================================= -->
+    <section class="contact" id="contacto" data-bg="blue">
+
+      <p class="contact__label reveal-fade">( Contacto )</p>
+
+      <h2 class="contact__title">
+        <span class="line"><span>¿Tienes una</span></span>
+        <span class="line line--indent"><span><em>idea</em> con</span></span>
+        <span class="line"><span>ganas de volar?</span></span>
+      </h2>
+
+      <!-- ✏️ TU CORREO: cambia en los DOS lugares (href y texto) -->
+      <a href="mailto:tucorreo@ejemplo.com" class="contact__mail reveal-up">
+        <span>tucorreo@ejemplo.com</span>
+        <span class="contact__mail-arrow">↗</span>
+      </a>
+
+      <!-- ✏️ TUS REDES: cambia "#" por tus enlaces reales -->
+      <ul class="contact__links reveal-up">
+        <li><a href="#" target="_blank" rel="noopener">Behance <span>↗</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn <span>↗</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram <span>↗</span></a></li>
+      </ul>
+
+      <footer class="footer">
+        <img src="img/logo-alitas.svg" alt="ALITAS" class="footer__logo-img">
+        <p>© <span class="js-year">2026</span> Alinette Galdames · Ideas que dan alas</p>
+        <a href="#inicio" class="footer__top">Volver arriba ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

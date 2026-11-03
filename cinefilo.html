@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ Título de la pestaña y descripción -->
+  <title>Cinéfilo — ALITAS · Alinette Galdames</title>
+  <meta name="description" content="Cinéfilo: diseño de una plataforma web para compartir opiniones, reseñas y experiencias sobre películas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Mismo CSS que la portada -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<!-- "case" = página de proyecto · "case--cinefilo" = estilos propios de este caso
+     "is-entering" = cortina de entrada (el JS la quita sola) -->
+<body class="case case--cinefilo is-entering">
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- =========================================================
+       NAVEGACIÓN (igual a la portada, pero los enlaces vuelven a index.html)
+       ========================================================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="ALITAS, ir a la portada">
+        <img src="img/logo-alitas.svg" alt="" class="nav__logo-img">
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html#proyectos" class="nav__link"><span data-hover="Proyectos">Proyectos</span></a>
+        <a href="index.html#sobre-mi"  class="nav__link"><span data-hover="Sobre mí">Sobre mí</span></a>
+        <a href="index.html#contacto"  class="nav__link"><span data-hover="Contacto">Contacto</span></a>
+      </nav>
+      <a href="index.html#contacto" class="nav__cta">Hablemos</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Menú móvil">
+      <a href="index.html#proyectos"><small>01</small>Proyectos</a>
+      <a href="index.html#sobre-mi"><small>02</small>Sobre mí</a>
+      <a href="index.html#contacto"><small>03</small>Contacto</a>
+    </nav>
+    <p class="mobile-menu__foot">Ideas que dan alas</p>
+  </div>
+
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         1. ENCABEZADO DEL CASO (fondo negro: tono más digital)
+         ========================================================= -->
+    <section class="case-hero" data-bg="black">
+
+      <div class="case-hero__top reveal-fade">
+        <a href="index.html#proyectos" class="case-back">
+          <span class="case-back__arrow">←</span> Todos los proyectos
+        </a>
+        <span class="case-hero__index">Proyecto 01 / 03</span>
+      </div>
+
+      <h1 class="case-title">
+        <span class="line"><span>Cinéfilo</span></span>
+      </h1>
+
+      <!-- ✏️ Etiquetas del proyecto. Cambia [Año] por el año real -->
+      <ul class="case-tags reveal-up">
+        <li>UX/UI</li>
+        <li>Plataforma web</li>
+        <li>[Año]</li>
+      </ul>
+
+      <!-- PORTADA DEL CASO dentro de una "ventana de navegador"
+           ✏️ Borra el <div class="ph">…</div> y pon:
+           <img src="img/cinefilo-portada.jpg" alt="Pantalla principal de Cinéfilo"> -->
+      <div class="case-cover browser reveal-up">
+        <figure class="media media--16x9 reveal-img">
+          <div class="ph ph--cinefilo">
+            <span class="ph__ui ph__ui--bar"></span>
+            <span class="ph__ui ph__ui--card"></span>
+            <span class="ph__ui ph__ui--card"></span>
+            <span class="ph__ui ph__ui--card"></span>
+            <span class="ph__label">Portada del caso · captura 16:9</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- Franja en movimiento (reutiliza la de la portada) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Opiniones</span><i></i><span>Reseñas</span><i></i><span>Experiencias</span><i></i><span>Cine</span><i></i>
+        <span>Opiniones</span><i></i><span>Reseñas</span><i></i><span>Experiencias</span><i></i><span>Cine</span><i></i>
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         2. INTRODUCCIÓN + FICHA
+         ========================================================= -->
+    <section class="case-intro" data-bg="black">
+      <!-- ✏️ Introducción breve del proyecto -->
+      <p class="case-intro__lead reveal-up">
+        Diseño de una plataforma web para compartir opiniones, reseñas y experiencias
+        sobre películas. <span class="temp">[Texto temporal: agrega aquí 1 o 2 frases que presenten el proyecto con tus palabras.]</span>
+      </p>
+
+      <!-- ✏️ Ficha: completa los datos entre corchetes -->
+      <dl class="case-facts">
+        <div class="reveal-up"><dt>Mi rol</dt><dd>[Tu rol en el proyecto]</dd></div>
+        <div class="reveal-up"><dt>Herramientas</dt><dd>[Herramienta], [Herramienta], [Herramienta]</dd></div>
+        <div class="reveal-up"><dt>Tipo</dt><dd>UX/UI · Plataforma web</dd></div>
+        <div class="reveal-up"><dt>Duración</dt><dd>[Duración / contexto: ramo, encargo…]</dd></div>
+      </dl>
+    </section>
+
+
+    <!-- =========================================================
+         3. CONTEXTO Y OBJETIVO
+         ========================================================= -->
+    <section class="case-block" data-bg="white">
+      <p class="case-block__label reveal-fade">( Contexto y objetivo )</p>
+
+      <div class="case-block__item reveal-up">
+        <h3>Contexto</h3>
+        <!-- ✏️ -->
+        <p>[Texto temporal: ¿Cuál era la situación o el problema? ¿Para quién es la plataforma?]</p>
+      </div>
+      <div class="case-block__item reveal-up">
+        <h3>Objetivo</h3>
+        <!-- ✏️ -->
+        <p>[Texto temporal: ¿Qué querías lograr con el diseño? ¿Qué debía resolver la plataforma?]</p>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         4. PROCESO (pasos con imagen, alternando lados)
+         ✏️ Para agregar un paso, copia un bloque <article class="step">
+         ========================================================= -->
+    <section class="case-section" data-bg="white">
+      <header class="case-section__head">
+        <h2 class="case-section__title"><span class="line"><span>Proceso</span></span></h2>
+        <p class="case-section__note reveal-fade">Bocetos, referencias, wireframes y capturas del desarrollo.</p>
+      </header>
+
+      <div class="steps">
+        <article class="step">
+          <figure class="step__media media media--16x10 reveal-img hover-zoom">
+            <!-- ✏️ <img src="img/cinefilo-proceso-1.jpg" alt="…"> -->
+            <div class="ph ph--beige"><span class="ph__label">Proceso 01 · bocetos o referencias</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">01</span>
+            <h3>[Etapa — ej: Investigación]</h3>
+            <p>[Texto temporal: describe qué hiciste en esta etapa.]</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <figure class="step__media media media--4x3 reveal-img hover-zoom">
+            <!-- ✏️ <img src="img/cinefilo-proceso-2.jpg" alt="…"> -->
+            <div class="ph ph--white"><span class="ph__label">Proceso 02 · wireframes</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">02</span>
+            <h3>[Etapa — ej: Estructura]</h3>
+            <p>[Texto temporal: describe qué hiciste en esta etapa.]</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <figure class="step__media media media--16x10 reveal-img hover-zoom">
+            <!-- ✏️ <img src="img/cinefilo-proceso-3.jpg" alt="…"> -->
+            <div class="ph ph--blue"><span class="ph__label">Proceso 03 · diseño de interfaz</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">03</span>
+            <h3>[Etapa — ej: Diseño visual]</h3>
+            <p>[Texto temporal: describe qué hiciste en esta etapa.]</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         5. PANTALLAS (tira horizontal, fondo negro)
+         Se desliza con el dedo, el trackpad o Shift + rueda del mouse.
+         ✏️ Agrega o quita <figure> de escritorio (screen--desktop) o celular (screen--phone)
+         ========================================================= -->
+    <section class="case-section" data-bg="black">
+      <header class="case-section__head">
+        <h2 class="case-section__title"><span class="line"><span>Pantallas</span></span></h2>
+        <p class="case-section__note reveal-fade">Versión escritorio y celular.</p>
+      </header>
+
+      <div class="screens reveal-up" tabindex="0" aria-label="Pantallas de Cinéfilo, desliza para ver más">
+        <figure class="screen--desktop">
+          <div class="browser"><div class="media media--16x10"><div class="ph ph--blue"><span class="ph__label">Pantalla 01</span></div></div></div>
+        </figure>
+        <figure class="screen--phone">
+          <div class="media"><div class="ph ph--orange"><span class="ph__label">Móvil 01</span></div></div>
+        </figure>
+        <figure class="screen--desktop">
+          <div class="browser"><div class="media media--16x10"><div class="ph ph--beige"><span class="ph__label">Pantalla 02</span></div></div></div>
+        </figure>
+        <figure class="screen--phone">
+          <div class="media"><div class="ph ph--blue"><span class="ph__label">Móvil 02</span></div></div>
+        </figure>
+        <figure class="screen--desktop">
+          <div class="browser"><div class="media media--16x10"><div class="ph ph--orange"><span class="ph__label">Pantalla 03</span></div></div></div>
+        </figure>
+      </div>
+      <p class="screens__hint">Desliza <span>→</span></p>
+    </section>
+
+
+    <!-- =========================================================
+         6. GALERÍA (tamaños variados)
+         ✏️ Cambia las clases g-8, g-4… para cambiar el ancho de cada imagen
+         ========================================================= -->
+    <section class="case-section" data-bg="white">
+      <header class="case-section__head">
+        <h2 class="case-section__title"><span class="line"><span>Galería</span></span></h2>
+      </header>
+
+      <div class="gallery">
+        <figure class="g-8">
+          <div class="media media--16x10 reveal-img hover-zoom"><div class="ph ph--black"><span class="ph__label">Imagen 01 · 16:10</span></div></div>
+          <figcaption class="caption"><b>01</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure class="g-4 g-push">
+          <div class="media media--3x4 reveal-img hover-zoom"><div class="ph ph--orange"><span class="ph__label">Imagen 02 · 3:4</span></div></div>
+          <figcaption class="caption"><b>02</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure class="g-5 g-start-2">
+          <div class="media media--1x1 reveal-img hover-zoom"><div class="ph ph--beige"><span class="ph__label">Imagen 03 · 1:1</span></div></div>
+          <figcaption class="caption"><b>03</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure class="g-6 g-push">
+          <div class="media media--4x3 reveal-img hover-zoom"><div class="ph ph--blue"><span class="ph__label">Imagen 04 · 4:3</span></div></div>
+          <figcaption class="caption"><b>04</b> [Pie de foto]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- Frase de cierre del caso. ✏️ Escribe un aprendizaje o resultado -->
+    <section class="case-quote" data-bg="white">
+      <p class="reveal-up">“[Texto temporal: una frase que resuma el proyecto o lo que aprendiste.]”</p>
+    </section>
+
+
+    <!-- =========================================================
+         7. SIGUIENTE PROYECTO + FOOTER (fondo azul)
+         ========================================================= -->
+    <section class="case-next" data-bg="blue">
+      <p class="case-next__label reveal-fade">( Siguiente proyecto )</p>
+
+      <a href="lafken.html" class="case-next__link">
+        <h2 class="case-next__title"><span class="line"><span>Lafken</span></span></h2>
+        <figure class="case-next__media media reveal-img">
+          <div class="ph ph--lafken">
+            <span class="ph__wave"></span><span class="ph__wave ph__wave--2"></span><span class="ph__box"></span>
+          </div>
+        </figure>
+        <span class="case-next__cta">
+          <span class="case-next__arrow">→</span> Packaging · Ver caso
+        </span>
+      </a>
+
+      <a href="index.html" class="case-next__home">← Volver a la portada</a>
+
+      <footer class="footer">
+        <img src="img/logo-alitas.svg" alt="ALITAS" class="footer__logo-img">
+        <p>© <span class="js-year">2026</span> Alinette Galdames · Ideas que dan alas</p>
+        <a href="#contenido" class="footer__top">Volver arriba ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Mismo JavaScript que la portada -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ Título de la pestaña y descripción -->
+  <title>Lafken — ALITAS · Alinette Galdames</title>
+  <meta name="description" content="Lafken: proyecto de diseño de packaging.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<!-- "case--lafken" = estilos propios de este caso (fotografía a sangre) -->
+<body class="case case--lafken is-entering">
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- =========================================================
+       NAVEGACIÓN
+       ========================================================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="ALITAS, ir a la portada">
+        <img src="img/logo-alitas.svg" alt="" class="nav__logo-img">
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html#proyectos" class="nav__link"><span data-hover="Proyectos">Proyectos</span></a>
+        <a href="index.html#sobre-mi"  class="nav__link"><span data-hover="Sobre mí">Sobre mí</span></a>
+        <a href="index.html#contacto"  class="nav__link"><span data-hover="Contacto">Contacto</span></a>
+      </nav>
+      <a href="index.html#contacto" class="nav__cta">Hablemos</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Menú móvil">
+      <a href="index.html#proyectos"><small>01</small>Proyectos</a>
+      <a href="index.html#sobre-mi"><small>02</small>Sobre mí</a>
+      <a href="index.html#contacto"><small>03</small>Contacto</a>
+    </nav>
+    <p class="mobile-menu__foot">Ideas que dan alas</p>
+  </div>
+
+
+  <main id="contenido">
+
+    <!-- =========================================================
+         1. ENCABEZADO: título enorme que se monta sobre la foto a sangre
+         ========================================================= -->
+    <section class="case-hero" data-bg="white">
+
+      <div class="case-hero__top reveal-fade">
+        <a href="index.html#proyectos" class="case-back">
+          <span class="case-back__arrow">←</span> Todos los proyectos
+        </a>
+        <span class="case-hero__index">Proyecto 02 / 03</span>
+      </div>
+
+      <h1 class="case-title">
+        <span class="line line--indent"><span>Lafken</span></span>
+      </h1>
+
+      <!-- PORTADA A SANGRE (ocupa todo el ancho de la pantalla)
+           ✏️ Ideal: una foto horizontal del packaging.
+           Borra el <div class="ph">…</div> y pon <img src="img/lafken-portada.jpg" alt="Packaging Lafken"> -->
+      <div class="case-cover case-cover--bleed">
+        <figure class="media reveal-img" data-parallax="0.04">
+          <div class="ph ph--lafken">
+            <span class="ph__wave"></span>
+            <span class="ph__wave ph__wave--2"></span>
+            <span class="ph__box"></span>
+            <span class="ph__label">Fotografía principal del packaging · horizontal</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         2. INTRODUCCIÓN + FICHA (fondo beige, más cálido)
+         ========================================================= -->
+    <section class="case-intro" data-bg="beige">
+      <ul class="case-tags case-tags--full reveal-up">
+        <li>Packaging</li>
+        <li>[Año]</li>
+      </ul>
+
+      <!-- ✏️ Introducción breve -->
+      <p class="case-intro__lead reveal-up">
+        Proyecto de diseño de packaging.
+        <span class="temp">[Texto temporal: presenta el producto y la propuesta del envase en 1 o 2 frases.]</span>
+      </p>
+
+      <dl class="case-facts">
+        <div class="reveal-up"><dt>Mi rol</dt><dd>[Tu rol en el proyecto]</dd></div>
+        <div class="reveal-up"><dt>Herramientas</dt><dd>[Herramienta], [Herramienta], [Herramienta]</dd></div>
+        <div class="reveal-up"><dt>Tipo</dt><dd>Packaging</dd></div>
+        <div class="reveal-up"><dt>Formato</dt><dd>[Tipo de envase, materiales…]</dd></div>
+      </dl>
+    </section>
+
+
+    <!-- =========================================================
+         3. EL ENVASE: texto fijo a la izquierda + fotos grandes a la derecha
+         (en celular, el texto queda arriba y las fotos debajo)
+         ========================================================= -->
+    <section class="sticky-split" data-bg="white">
+      <div class="sticky-split__text">
+        <h2><span class="line"><span>El envase</span></span></h2>
+        <!-- ✏️ -->
+        <p class="reveal-up">[Texto temporal: describe el envase, sus materiales, su forma o su gráfica.]</p>
+      </div>
+
+      <div class="sticky-split__media">
+        <figure>
+          <div class="media media--4x5 reveal-img hover-zoom"><div class="ph ph--blue"><span class="ph__label">Foto packaging 01 · 4:5</span></div></div>
+          <figcaption class="caption"><b>01</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure>
+          <div class="media media--1x1 reveal-img hover-zoom"><div class="ph ph--orange"><span class="ph__label">Foto detalle 02 · 1:1</span></div></div>
+          <figcaption class="caption"><b>02</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure>
+          <div class="media media--4x3 reveal-img hover-zoom"><div class="ph ph--beige"><span class="ph__label">Foto packaging 03 · 4:3</span></div></div>
+          <figcaption class="caption"><b>03</b> [Pie de foto]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         4. CONTEXTO Y OBJETIVO
+         ========================================================= -->
+    <section class="case-block case-block--spaced" data-bg="white">
+      <p class="case-block__label reveal-fade">( Contexto y objetivo )</p>
+      <div class="case-block__item reveal-up">
+        <h3>Contexto</h3>
+        <p>[Texto temporal: ¿Cuál es el producto? ¿Para quién? ¿Cuál era el encargo?]</p>
+      </div>
+      <div class="case-block__item reveal-up">
+        <h3>Objetivo</h3>
+        <p>[Texto temporal: ¿Qué debía comunicar o resolver el envase?]</p>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         5. PROCESO
+         ========================================================= -->
+    <section class="case-section" data-bg="white">
+      <header class="case-section__head">
+        <h2 class="case-section__title"><span class="line"><span>Proceso</span></span></h2>
+        <p class="case-section__note reveal-fade">Bocetos, troquel, pruebas de impresión y maquetas.</p>
+      </header>
+
+      <div class="steps">
+        <article class="step">
+          <figure class="step__media media media--4x3 reveal-img hover-zoom">
+            <!-- ✏️ <img src="img/lafken-proceso-1.jpg" alt="…"> -->
+            <div class="ph ph--white"><span class="ph__label">Proceso 01 · bocetos</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">01</span>
+            <h3>[Etapa — ej: Exploración]</h3>
+            <p>[Texto temporal: describe esta etapa.]</p>
+          </div>
+        </article>
+        <article class="step">
+          <figure class="step__media media media--16x10 reveal-img hover-zoom">
+            <div class="ph ph--beige"><span class="ph__label">Proceso 02 · troquel / estructura</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">02</span>
+            <h3>[Etapa — ej: Estructura]</h3>
+            <p>[Texto temporal: describe esta etapa.]</p>
+          </div>
+        </article>
+        <article class="step">
+          <figure class="step__media media media--4x3 reveal-img hover-zoom">
+            <div class="ph ph--blue"><span class="ph__label">Proceso 03 · maqueta / prototipo</span></div>
+          </figure>
+          <div class="step__text reveal-up">
+            <span class="step__num">03</span>
+            <h3>[Etapa — ej: Prototipo]</h3>
+            <p>[Texto temporal: describe esta etapa.]</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         6. GALERÍA FOTOGRÁFICA (fondo beige)
+         Empieza con una foto panorámica y sigue con tamaños variados.
+         ========================================================= -->
+    <section class="case-section" data-bg="beige">
+      <header class="case-section__head">
+        <h2 class="case-section__title"><span class="line"><span>Galería</span></span></h2>
+      </header>
+
+      <div class="gallery">
+        <figure class="g-12">
+          <div class="media media--21x9 reveal-img hover-zoom"><div class="ph ph--blue"><span class="ph__label">Foto panorámica · 21:9</span></div></div>
+        </figure>
+        <figure class="g-5">
+          <div class="media media--4x5 reveal-img hover-zoom"><div class="ph ph--orange"><span class="ph__label">Foto 02 · 4:5</span></div></div>
+          <figcaption class="caption"><b>02</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure class="g-7 g-push">
+          <div class="media media--4x3 reveal-img hover-zoom"><div class="ph ph--white"><span class="ph__label">Foto 03 · 4:3</span></div></div>
+          <figcaption class="caption"><b>03</b> [Pie de foto]</figcaption>
+        </figure>
+        <figure class="g-4 g-start-3">
+          <div class="media media--1x1 reveal-img hover-zoom"><div class="ph ph--black"><span class="ph__label">Detalle 04 · 1:1</span></div></div>
+        </figure>
+        <figure class="g-4">
+          <div class="media media--1x1 reveal-img hover-zoom"><div class="ph ph--blue"><span class="ph__label">Detalle 05 · 1:1</span></div></div>
+        </figure>
+      </div>
+    </section>
+
+
+    <section class="case-quote" data-bg="beige">
+      <p class="reveal-up">“[Texto temporal: una frase que resuma el proyecto o lo que aprendiste.]”</p>
+    </section>
+
+
+    <!-- =========================================================
+         7. SIGUIENTE PROYECTO + FOOTER
+         ========================================================= -->
+    <section class="case-next" data-bg="blue">
+      <p class="case-next__label reveal-fade">( Siguiente proyecto )</p>
+
+      <a href="chancho-en-piedra.html" class="case-next__link">
+        <h2 class="case-next__title">
+          <span class="line"><span>Chancho</span></span>
+          <span class="line"><span>en Piedra</span></span>
+        </h2>
+        <figure class="case-next__media media reveal-img">
+          <div class="ph ph--vinilo"><span class="ph__record"></span><span class="ph__sleeve"></span></div>
+        </figure>
+        <span class="case-next__cta">
+          <span class="case-next__arrow">→</span> Identidad visual · Álbum / Vinilo
+        </span>
+      </a>
+
+      <a href="index.html" class="case-next__home">← Volver a la portada</a>
+
+      <footer class="footer">
+        <img src="img/logo-alitas.svg" alt="ALITAS" class="footer__logo-img">
+        <p>© <span class="js-year">2026</span> Alinette Galdames · Ideas que dan alas</p>
+        <a href="#contenido" class="footer__top">Volver arriba ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
