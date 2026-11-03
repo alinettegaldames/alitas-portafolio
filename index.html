@@ -51,7 +51,7 @@
         <a href="#contacto"  class="nav__link"><span data-hover="Contacto">Contacto</span></a>
       </nav>
 
-      <a href="#contacto" class="nav__cta">Hablemos</a>
+      <button class="nav__cta" type="button" data-contact-open>Hablemos</button>
 
       <!-- Botón hamburguesa (solo se ve en celular) -->
       <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
@@ -63,12 +63,50 @@
   <!-- Menú de celular a pantalla completa -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav class="mobile-menu__links" aria-label="Menú móvil">
-      <a href="#proyectos"><small>01</small>Proyectos</a>
-      <a href="#sobre-mi"><small>02</small>Sobre mí</a>
-      <a href="#contacto"><small>03</small>Contacto</a>
+      <a href="#proyectos"><span>Proyectos</span></a>
+      <a href="#sobre-mi"><span>Sobre mí</span></a>
+      <a href="#contacto"><span>Contacto</span></a>
     </nav>
+    <button class="mobile-menu__contact" type="button" data-contact-open>Hablemos <span aria-hidden="true">↗</span></button>
     <p class="mobile-menu__foot">Ideas que dan alas</p>
   </div>
+
+  <dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title">
+    <div class="contact-modal__content">
+      <div class="contact-modal__head">
+        <div>
+          <p class="contact-modal__eyebrow">ALITAS · CONTACTO</p>
+          <h2 id="contact-modal-title">¡Hablemos de tu idea!</h2>
+        </div>
+        <button class="contact-modal__close" type="button" aria-label="Cerrar ventana de contacto">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <form class="contact-form">
+        <label class="contact-form__field">
+          <span>Nombre</span>
+          <input name="name" type="text" autocomplete="name" required>
+        </label>
+        <label class="contact-form__field">
+          <span>Correo electrónico</span>
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+        <label class="contact-form__field">
+          <span>Mensaje</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <p class="contact-form__note">Al enviar, se abrirá tu aplicación de correo para que puedas completar el envío.</p>
+        <button class="contact-form__submit" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+        <p class="contact-form__status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="contact-modal__direct">
+        ¿Prefieres escribir directamente?
+        <a href="mailto:a.galdamesaraya@gmail.com" data-contact-email>Enviar un correo <span aria-hidden="true">↗</span></a>
+      </p>
+    </div>
+  </dialog>
 
 
   <main>
@@ -120,10 +158,6 @@
         </p>
       </div>
 
-      <a href="#proyectos" class="hero__scroll reveal-fade" aria-label="Ir a los proyectos">
-        <span>Ver proyectos</span>
-        <span class="hero__scroll-arrow">↓</span>
-      </a>
     </section>
 
 
@@ -141,16 +175,14 @@
 
 
     <!-- =========================================================
-         4. FRASE DECLARACIÓN (cambio de ritmo: solo texto grande)
-         ✏️ Reescribe esta frase con tu propia voz
-         ========================================================= -->
+        4. FRASE DECLARACIÓN
+        ========================================================= -->
     <section class="statement" data-bg="white">
-      <h2 class="statement__text">
-        <span class="line"><span>Diseño marcas, envases</span></span>
-        <span class="line"><span>y experiencias digitales</span></span>
-        <span class="line"><span>para que las ideas</span></span>
-        <span class="line"><span><mark>despeguen.</mark></span></span>
-      </h2>
+     <h2 class="statement__text">
+       <span class="line"><span>Hay ideas que nacen</span></span>
+       <span class="line"><span>para <mark>volar.</mark></span></span>
+       <span class="line"><span>Yo les doy forma.</span></span>
+     </h2>
     </section>
 
 
@@ -167,7 +199,6 @@
         <h2 class="work__title">
           <span class="line"><span>Proyectos</span></span>
         </h2>
-        <p class="work__count reveal-fade">( 03 )</p>
       </header>
 
       <div class="work__grid">
@@ -186,7 +217,6 @@
               </div>
             </figure>
             <div class="project__info">
-              <span class="project__num">01</span>
               <h3 class="project__name">Cinéfilo</h3>
               <p class="project__cat">UX/UI · Plataforma web</p>
               <!-- ✏️ Descripción corta del proyecto -->
@@ -212,7 +242,6 @@
               </div>
             </figure>
             <div class="project__info">
-              <span class="project__num">02</span>
               <h3 class="project__name">Lafken</h3>
               <p class="project__cat">Packaging</p>
               <span class="project__cta" aria-hidden="true">
@@ -225,8 +254,6 @@
 
         <!-- PROYECTO 03 — CHANCHO EN PIEDRA -->
         <article class="project project--square">
-          <!-- Número gigante decorativo al costado -->
-          <span class="project__bignum" aria-hidden="true">03</span>
           <a href="chancho-en-piedra.html" class="project__link" aria-label="Ver caso Chancho en Piedra">
             <figure class="project__media reveal-img">
               <!-- ✏️ Imagen: <img src="img/chancho-en-piedra.jpg" alt="Vinilo Chancho en Piedra"> -->
@@ -237,7 +264,6 @@
               </div>
             </figure>
             <div class="project__info">
-              <span class="project__num">03</span>
               <h3 class="project__name">Chancho en Piedra</h3>
               <p class="project__cat">Identidad visual · Álbum / Vinilo</p>
               <span class="project__cta" aria-hidden="true">
@@ -285,14 +311,13 @@
           <span class="line"><span>Alinette.</span></span>
         </h2>
 
-        <!-- ✏️ ESCRIBE AQUÍ TU PRESENTACIÓN (2 a 4 líneas) -->
-        <p class="about__text reveal-up">
-          [Escribe aquí una breve presentación: quién eres, qué estudias,
-          qué te mueve del diseño y qué tipo de proyectos te gustaría hacer.]
-        </p>
+        <div class="about__text reveal-up">
+          <p>Soy diseñadora gráfica en formación, con una mirada creativa que conecta diseño, tecnología y comunicación visual. Me interesa transformar ideas en soluciones que no solo se vean bien, sino que también tengan sentido y generen experiencias significativas.</p>
+          <p>Disfruto explorar el UX/UI, el branding y el packaging, combinando pensamiento visual, curiosidad y atención al detalle. Me motiva experimentar, descubrir nuevas posibilidades y encontrar formas de comunicar que conecten con las personas.</p>
+          <p>Creo en el diseño como una herramienta para dar forma a ideas, resolver desafíos y crear experiencias con propósito.</p>
+        </div>
 
-        <!-- Habilidades. ✏️ Agrega o quita <li> -->
-        <div class="skills">
+        <div class="skills skills--profile">
           <div class="skills__col reveal-up">
             <h3 class="skills__title">Áreas</h3>
             <ul>
@@ -304,17 +329,15 @@
           <div class="skills__col reveal-up">
             <h3 class="skills__title">Herramientas</h3>
             <ul>
-              <li>[Herramienta]</li>
-              <li>[Herramienta]</li>
-              <li>[Herramienta]</li>
-            </ul>
-          </div>
-          <div class="skills__col reveal-up">
-            <h3 class="skills__title">Me interesa</h3>
-            <ul>
-              <li>[Interés]</li>
-              <li>[Interés]</li>
-              <li>[Interés]</li>
+              <li>Figma</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Canva</li>
+              <li>Procreate</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Python</li>
             </ul>
           </div>
         </div>
@@ -327,25 +350,20 @@
          ========================================================= -->
     <section class="contact" id="contacto" data-bg="blue">
 
-      <p class="contact__label reveal-fade">( Contacto )</p>
-
       <h2 class="contact__title">
         <span class="line"><span>¿Tienes una</span></span>
         <span class="line line--indent"><span><em>idea</em> con</span></span>
         <span class="line"><span>ganas de volar?</span></span>
       </h2>
 
-      <!-- ✏️ TU CORREO: cambia en los DOS lugares (href y texto) -->
-      <a href="mailto:tucorreo@ejemplo.com" class="contact__mail reveal-up">
-        <span>tucorreo@ejemplo.com</span>
+      <a href="mailto:a.galdamesaraya@gmail.com" class="contact__mail reveal-up">
+        <span>a.galdamesaraya@gmail.com</span>
         <span class="contact__mail-arrow">↗</span>
       </a>
 
-      <!-- ✏️ TUS REDES: cambia "#" por tus enlaces reales -->
       <ul class="contact__links reveal-up">
-        <li><a href="#" target="_blank" rel="noopener">Behance <span>↗</span></a></li>
-        <li><a href="#" target="_blank" rel="noopener">LinkedIn <span>↗</span></a></li>
-        <li><a href="#" target="_blank" rel="noopener">Instagram <span>↗</span></a></li>
+        <li><a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></li>
+        <li><a href="https://www.instagram.com/a.l.i.t.a.s_/" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a></li>
       </ul>
 
       <footer class="footer">
