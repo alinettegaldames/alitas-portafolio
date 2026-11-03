@@ -1,0 +1,29 @@
+Pon aquí tus imágenes. Nombres sugeridos (los mismos que aparecen en los comentarios del HTML).
+Puedes usar otros nombres: solo asegúrate de escribir el mismo nombre en el src="img/...".
+
+LOGO E ISOTIPO
+  logo-alitas.svg          → navegación y footer de todas las páginas
+  isotipo-alitas.svg       → isotipo del hero y del sello giratorio
+
+PORTADA (index.html)
+  hero.jpg                 → imagen grande de la portada (vertical 4:5)
+  cinefilo.jpg             → miniatura Cinéfilo (16:10)
+  lafken.jpg               → miniatura Lafken (3:4)
+  chancho-en-piedra.jpg    → miniatura Chancho en Piedra (1:1)
+  alinette.jpg             → tu foto personal (4:5)
+
+CINÉFILO (cinefilo.html)
+  cinefilo-portada.jpg     → captura principal (16:9)
+  cinefilo-proceso-1.jpg … → imágenes de proceso
+  capturas de pantallas    → escritorio 16:10 y celular vertical (9:19.5)
+
+LAFKEN (lafken.html)
+  lafken-portada.jpg       → foto horizontal a todo el ancho
+  fotos del envase         → 4:5, 1:1, 4:3 y una panorámica 21:9
+
+CHANCHO EN PIEDRA (chancho-en-piedra.html)
+  chancho-caratula.jpg     → carátula cuadrada (1:1)
+  fotos del vinilo y la identidad → 1:1, 21:9, 4:3, 4:5
+
+Consejo: exporta las fotos a unos 1600–2000 px de ancho y comprímelas
+(por ejemplo en squoosh.app) para que la web cargue rápido.
