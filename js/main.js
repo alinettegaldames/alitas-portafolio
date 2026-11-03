@@ -8,8 +8,10 @@
    4. Cambio de color de fondo según la sección
    5. Navegación: se esconde al bajar, aparece al subir
    6. Menú móvil
-   7. Parallax suave de la imagen del hero
-   8. Año automático en el footer
+   7. Ventana de contacto
+   8. Parallax suave de la imagen del hero
+   9. Año automático en el footer
+   10. Transición entre páginas
    ========================================================================== */
 
 
@@ -18,6 +20,7 @@
    ✏️ Puedes cambiar la duración de la intro (en milisegundos).
    -------------------------------------------------------------------------- */
 const INTRO_DURATION = 1300;
+const CONTACT_EMAIL = 'a.galdamesaraya@gmail.com';
 
 // ¿La persona pidió "reducir movimiento" en su sistema?
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -30,16 +33,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 function startIntro() {
   const intro = document.querySelector('.intro');
 
-  // La intro se muestra solo la primera vez que se abre la web (por pestaña).
-  // Al volver desde un proyecto, no se repite.
-  let introSeen = false;
-  try {
-    introSeen = sessionStorage.getItem('alitas-intro') === '1';
-    sessionStorage.setItem('alitas-intro', '1');
-  } catch (e) { /* si el navegador bloquea el almacenamiento, no pasa nada */ }
-
-  // Si no hay intro, ya se vio o se prefiere menos movimiento: empezar de inmediato
-  if (!intro || introSeen || reduceMotion) {
+  // Si no hay intro o se prefiere menos movimiento, empezar de inmediato
+  if (!intro || reduceMotion) {
     document.body.classList.remove('is-loading');
     if (intro) intro.remove();
     startReveals();
@@ -169,6 +164,8 @@ function setupMobileMenu() {
   const toggle = document.querySelector('.nav__toggle');
   const menu = document.getElementById('mobile-menu');
   if (!toggle || !menu) return;
+  const links = [...menu.querySelectorAll('a')];
+  const focusable = [...menu.querySelectorAll('a, button'), toggle];
 
   const setOpen = (open) => {
     document.body.classList.toggle('menu-open', open);
@@ -176,6 +173,14 @@ function setupMobileMenu() {
     toggle.setAttribute('aria-expanded', open);
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     menu.setAttribute('aria-hidden', !open);
+    if (open) {
+      links[0]?.focus();
+    } else if (menu.contains(document.activeElement)) {
+      const focusTarget = window.innerWidth > 760
+        ? document.querySelector('.nav__logo')
+        : toggle;
+      focusTarget?.focus();
+    }
   };
 
   toggle.addEventListener('click', () => {
@@ -185,9 +190,24 @@ function setupMobileMenu() {
   menu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => setOpen(false));
   });
+  menu.querySelector('[data-contact-open]')?.addEventListener('click', () => setOpen(false));
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') setOpen(false);
+    if (!document.body.classList.contains('menu-open')) return;
+    if (e.key === 'Escape') {
+      setOpen(false);
+      return;
+    }
+    if (e.key !== 'Tab' || !focusable.length) return;
+
+    const activeIndex = focusable.indexOf(document.activeElement);
+    if (e.shiftKey && activeIndex <= 0) {
+      e.preventDefault();
+      focusable[focusable.length - 1].focus();
+    } else if (!e.shiftKey && activeIndex === focusable.length - 1) {
+      e.preventDefault();
+      focusable[0].focus();
+    }
   });
 
   // Si la pantalla se agranda (ej: girar la tablet), cerramos el menú
@@ -196,9 +216,98 @@ function setupMobileMenu() {
   });
 }
 
+function setupStatementReveal() {
+  const statement = document.querySelector('.statement__text');
+  if (!statement) return;
+
+  const revealWhenVisible = () => {
+    const bounds = statement.getBoundingClientRect();
+    const visible = bounds.top < window.innerHeight * 0.92 && bounds.bottom > window.innerHeight * 0.08;
+    if (!visible && !statement.classList.contains('is-visible')) return;
+
+    statement.classList.add('is-visible');
+    window.removeEventListener('scroll', revealWhenVisible);
+    window.removeEventListener('resize', revealWhenVisible);
+  };
+
+  window.addEventListener('scroll', revealWhenVisible, { passive: true });
+  window.addEventListener('resize', revealWhenVisible);
+  revealWhenVisible();
+}
 
 /* --------------------------------------------------------------------------
-   7. PARALLAX SUAVE
+   7. VENTANA DE CONTACTO
+   Valida el formulario y prepara un correo para que la persona lo envíe
+   desde su aplicación de correo. No se envían datos a un servidor.
+   -------------------------------------------------------------------------- */
+function setupContactModal() {
+  const dialog = document.getElementById('contact-modal');
+  const openButtons = document.querySelectorAll('[data-contact-open]');
+  const closeButton = dialog?.querySelector('.contact-modal__close');
+  const form = dialog?.querySelector('.contact-form');
+  const status = dialog?.querySelector('.contact-form__status');
+  if (!dialog || !openButtons.length || !closeButton || !form || !status) return;
+
+  const directEmail = dialog.querySelector('[data-contact-email]');
+  const pageEmail = document.querySelector('.contact__mail');
+  if (directEmail) directEmail.href = `mailto:${CONTACT_EMAIL}`;
+  if (pageEmail) {
+    pageEmail.href = `mailto:${CONTACT_EMAIL}`;
+    const label = pageEmail.querySelector('span');
+    if (label) label.textContent = CONTACT_EMAIL;
+  }
+
+  let returnFocus = null;
+  openButtons.forEach((openButton) => {
+    openButton.addEventListener('click', () => {
+      returnFocus = document.activeElement;
+      status.textContent = '';
+      dialog.showModal();
+      closeButton.focus();
+    });
+  });
+
+  closeButton.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      dialog.close();
+    }
+  });
+  dialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    dialog.close();
+  });
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    if (returnFocus instanceof HTMLElement) returnFocus.focus();
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const name = String(formData.get('name') ?? '').trim();
+    const email = String(formData.get('email') ?? '').trim();
+    const message = String(formData.get('message') ?? '').trim();
+    const nameField = form.elements.namedItem('name');
+    const messageField = form.elements.namedItem('message');
+    nameField.setCustomValidity(name ? '' : 'Escribe tu nombre.');
+    messageField.setCustomValidity(message ? '' : 'Escribe un mensaje.');
+    if (!form.reportValidity()) return;
+
+    const subject = `Mensaje de ${name}`;
+    const body = `Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`;
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    status.textContent = 'Se abrirá tu aplicación de correo. Revisa el mensaje y envíalo desde allí.';
+    window.location.href = mailto;
+  });
+}
+
+/* --------------------------------------------------------------------------
+   8. PARALLAX SUAVE
    Los elementos con data-parallax="0.08" se mueven un poco más lento que
    el scroll. ✏️ Número más alto = más movimiento (recomendado: 0.05 a 0.15).
    -------------------------------------------------------------------------- */
@@ -230,7 +339,7 @@ function setupParallax() {
 
 
 /* --------------------------------------------------------------------------
-   8. AÑO AUTOMÁTICO
+   9. AÑO AUTOMÁTICO
    -------------------------------------------------------------------------- */
 function setYear() {
   document.querySelectorAll('.js-year').forEach((el) => {
@@ -240,7 +349,7 @@ function setYear() {
 
 
 /* --------------------------------------------------------------------------
-   9. TRANSICIÓN ENTRE PÁGINAS
+   10. TRANSICIÓN ENTRE PÁGINAS
    Al hacer clic en un enlace a otra página del sitio (.html), una cortina
    azul cubre la pantalla y luego se abre la nueva página.
    En las páginas de proyecto, la cortina se retira al entrar.
@@ -283,5 +392,7 @@ setupPageTransitions();
 setupThemes();
 setupNav();
 setupMobileMenu();
+setupStatementReveal();
+setupContactModal();
 setupParallax();
 startIntro();
