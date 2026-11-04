@@ -1041,10 +1041,12 @@ body.is-leaving::after { transform: scaleY(1); }
 .media--3x1   { aspect-ratio: 3 / 1; }
 .media--16x10 { aspect-ratio: 16 / 10; }
 .media--4x3   { aspect-ratio: 4 / 3; }
+.media--5x6   { aspect-ratio: 5 / 6; }
 .media--3x4   { aspect-ratio: 3 / 4; }
 .media--4x5   { aspect-ratio: 4 / 5; }
 .media--1x1   { aspect-ratio: 1 / 1; }
 .media--21x9  { aspect-ratio: 21 / 9; }
+.media--story-crop img { object-position: center top; }
 
 /* Pie de foto */
 .caption {
@@ -1154,6 +1156,7 @@ body.is-leaving::after { transform: scaleY(1); }
   border-bottom: 1px solid var(--line-color);
 }
 .case-section__title { font-size: clamp(2.8rem, 8vw, 8rem); }
+.case-section__title .line { padding-right: .12em; margin-right: -.12em; }
 .case-section__note { max-width: 30ch; font-size: .9rem; opacity: .75; text-align: right; }
 
 /* Proceso: pasos con imagen. Alternan lado izquierdo / derecho */
@@ -1298,14 +1301,20 @@ body.is-leaving::after { transform: scaleY(1); }
 
 
 /* ---------- 15.5 LAFKEN — fotografía protagonista ----------
-   Portada a sangre (todo el ancho), título que se monta sobre la foto
-   y una sección con texto fijo y fotos que pasan al lado. */
+   Encabezado oscuro y fotografía a sangre, con texto fijo y fotos al lado. */
 .case--lafken .case-hero { padding-bottom: 0; }
-.case--lafken .case-title { margin-bottom: 0; position: relative; z-index: 2; }
-.case-cover--bleed {
-  margin: calc(-0.42 * clamp(3.4rem, 14vw, 15rem)) calc(var(--gutter) * -1) 0;
+.case--lafken .case-title {
+  color: var(--beige);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
-.case-cover--bleed .media { aspect-ratio: auto; height: clamp(26rem, 92vh, 60rem); border-radius: 0; }
+.case-cover--bleed {
+  margin: 0 calc(var(--gutter) * -1);
+}
+.case-cover--bleed .media {
+  aspect-ratio: 1672 / 941; height: auto;
+  border-radius: 0; background: var(--negro);
+}
+.case-cover--bleed .media img { object-fit: cover; }
 
 /* Texto fijo a la izquierda mientras las fotos se desplazan a la derecha */
 .sticky-split {
