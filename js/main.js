@@ -181,6 +181,32 @@ function setupProjectFilters() {
   });
 }
 
+function setupHeroArt() {
+  const art = document.querySelector('.hero-art');
+  if (!art) return;
+
+  let touchStart = null;
+  art.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') touchStart = { x: event.clientX, y: event.clientY };
+  });
+  art.addEventListener('pointerup', (event) => {
+    if (event.pointerType !== 'touch' || !touchStart) return;
+    const distance = Math.hypot(event.clientX - touchStart.x, event.clientY - touchStart.y);
+    if (distance < 10) art.classList.toggle('is-scattered');
+    touchStart = null;
+  });
+  art.addEventListener('pointercancel', () => { touchStart = null; });
+  document.addEventListener('pointerdown', (event) => {
+    if (!art.contains(event.target)) art.classList.remove('is-scattered');
+  });
+  art.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      art.classList.remove('is-scattered');
+      art.blur();
+    }
+  });
+}
+
 
 /* --------------------------------------------------------------------------
    6. MENÚ MÓVIL
@@ -417,6 +443,7 @@ setupPageTransitions();
 setupThemes();
 setupNav();
 setupProjectFilters();
+setupHeroArt();
 setupMobileMenu();
 setupStatementReveal();
 setupContactModal();

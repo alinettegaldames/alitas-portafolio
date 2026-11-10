@@ -6,11 +6,11 @@ LOGO E ISOTIPO
   isotipo-alitas.svg       → isotipo del hero y del sello giratorio
 
 PORTADA (index.html)
-  hero.jpg                 → imagen grande de la portada (vertical 4:5)
+  alinette-hero.png        → fotografía transparente de la portada
   cinefilo.jpg             → miniatura Cinéfilo (16:10)
   lafken.jpg               → miniatura Lafken (3:4)
   chancho-en-piedra.jpg    → miniatura Chancho en Piedra (1:1)
-  alinette.jpg             → tu foto personal (4:5)
+  alinette-sobre-mi.png    → tu foto personal (4:5)
 
 CINÉFILO (cinefilo.html)
   cinefilo-portada.jpg     → captura principal (16:9)

@@ -138,25 +138,29 @@
         </span>
       </h1>
 
-      <!-- Imagen grande del hero, desplazada a la derecha -->
-      <figure class="hero__media reveal-img" data-parallax="0.08">
-        <!-- ✏️ IMAGEN DEL HERO
-             Borra el <div class="ph">…</div> y pon:
-             <img src="img/hero.jpg" alt="Describe tu imagen"> -->
-        <div class="ph ph--hero">
-          <span class="ph__shape ph__shape--sun"></span>
-          <span class="ph__shape ph__shape--arc"></span>
-          <span class="ph__label">Imagen hero · 4:5</span>
+      <figure class="hero__media">
+        <div class="hero-art" id="hero-art" tabindex="0" role="group" aria-label="Composición de herramientas creativas" aria-describedby="hero-art-help">
+          <img class="hero-art__portrait" src="img/alinette-hero.png" alt="Alinette trabajando en su computador" width="1152" height="768">
+          <div class="hero-art__items" aria-hidden="true">
+            <span class="hero-art__item hero-art__item--ai"><span class="hero-art__file"><b>Ai</b><small>Illustrator</small></span></span>
+            <span class="hero-art__item hero-art__item--ps"><span class="hero-art__file"><b>Ps</b><small>Photoshop</small></span></span>
+            <span class="hero-art__item hero-art__item--id"><span class="hero-art__file"><b>Id</b><small>InDesign</small></span></span>
+            <span class="hero-art__item hero-art__item--figma"><span class="hero-art__file"><b>Fi</b><small>Figma</small></span></span>
+            <span class="hero-art__item hero-art__item--code"><span class="hero-art__file"><b>&lt;/&gt;</b><small>VS Code</small></span></span>
+            <span class="hero-art__item hero-art__item--chatgpt"><span class="hero-art__file"><b>✳</b><small>ChatGPT</small></span></span>
+            <span class="hero-art__item hero-art__item--claude"><span class="hero-art__file"><b>✦</b><small>Claude</small></span></span>
+            <span class="hero-art__item hero-art__item--github"><span class="hero-art__file"><b>GH</b><small>GitHub</small></span></span>
+            <span class="hero-art__item hero-art__item--copilot"><span class="hero-art__file"><b>✧</b><small>GitHub Copilot</small></span></span>
+          </div>
+          <div class="hero__claim">
+            <img src="img/isotipo-alitas.svg" alt="" class="iso-img iso-slot--float" aria-hidden="true">
+            <p class="hero__claim-text reveal-up">
+              <em>Ideas que</em><br>dan alas
+            </p>
+          </div>
         </div>
+        <figcaption class="hero-art__help" id="hero-art-help">Pasa el cursor, enfoca con el teclado o toca la composición para mover las herramientas.</figcaption>
       </figure>
-
-      <!-- Bloque con el concepto de marca -->
-      <div class="hero__claim">
-        <img src="img/isotipo-alitas.svg" alt="" class="iso-img iso-slot--float" aria-hidden="true">
-        <p class="hero__claim-text reveal-up">
-          <em>Ideas que</em><br>dan alas
-        </p>
-      </div>
 
     </section>
 
@@ -299,10 +303,7 @@
 
       <div class="about__photo-wrap">
         <figure class="about__photo reveal-img">
-          <!-- ✏️ FOTO PERSONAL: <img src="img/alinette.jpg" alt="Retrato de Alinette Galdames"> -->
-          <div class="ph ph--portrait">
-            <span class="ph__label">Tu fotografía · 4:5</span>
-          </div>
+          <img src="img/alinette-sobre-mi.png" alt="Retrato de Alinette Galdames con la identidad visual de ALITAS" loading="lazy" width="768" height="960">
         </figure>
 
         <!-- Sello giratorio con el isotipo al centro -->
