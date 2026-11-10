@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALITAS editorial — Alinette Galdames</title>
+  <meta name="description" content="Espacio para la pieza gráfica editorial de la identidad ALITAS.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="case case--editorial is-entering">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="ALITAS, ir a la portada">
+        <img src="img/logo-alitas.svg" alt="" class="nav__logo-img">
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html#proyectos" class="nav__link"><span data-hover="Proyectos">Proyectos</span></a>
+        <a href="index.html#sobre-mi" class="nav__link"><span data-hover="Sobre mí">Sobre mí</span></a>
+        <a href="index.html#contacto" class="nav__link"><span data-hover="Contacto">Contacto</span></a>
+      </nav>
+      <a href="index.html#contacto" class="nav__cta">Hablemos</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Menú móvil">
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html#sobre-mi">Sobre mí</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <p class="mobile-menu__foot">Ideas que dan alas</p>
+  </div>
+
+  <main id="contenido">
+    <section class="case-hero" data-bg="orange">
+      <div class="case-hero__top reveal-fade">
+        <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a>
+      </div>
+      <h1 class="case-title"><span class="line"><span>ALITAS</span></span><span class="line"><span>editorial</span></span></h1>
+    </section>
+
+    <section class="case-section" data-bg="white">
+      <div class="gallery">
+        <figure class="g-12">
+          <div class="media media--16x9 reveal-img">
+            <div class="ph ph--white"><span class="ph__label">Pieza gráfica editorial · espacio para imagen</span></div>
+          </div>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Espacio reservado para incorporar la pieza gráfica editorial.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-next" data-bg="blue">
+      <a href="cinefilo.html" class="case-next__link">
+        <span class="case-next__title">Cinéfilo</span>
+        <span class="case-next__media reveal-img"><img src="img/cinefilo/16-9%20cinefilo.png" alt=""></span>
+      </a>
+      <a href="index.html#proyectos" class="case-next__home">← Volver a todos los proyectos</a>
+      <footer class="footer">
+        <img src="img/logo-alitas.svg" alt="ALITAS" class="footer__logo-img">
+        <p>© <span class="js-year">2026</span> Alinette Galdames · Ideas que dan alas</p>
+        <a href="#contenido" class="footer__top">Volver arriba ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

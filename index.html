@@ -11,7 +11,7 @@
   <!-- Tipografías: Montserrat (titulares) y Nunito Sans (textos) desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
@@ -34,7 +34,7 @@
   <!-- Enlace oculto para quienes navegan con teclado -->
   <a class="skip-link" href="#proyectos">Saltar a los proyectos</a>
 
-  <!-- =========================================================
+  <!-- =========================================================|
        1. NAVEGACIÓN
        ========================================================= -->
   <header class="nav" id="nav">
@@ -120,9 +120,9 @@
 
       <!-- Fila superior con datos -->
       <div class="hero__meta">
-        <p class="hero__meta-item reveal-fade">Diseñadora gráfica<br>en formación</p>
+        <p class="hero__meta-item reveal-fade">Diseñadora gráfica</p>
         <p class="hero__meta-item reveal-fade">UX/UI · Branding · Packaging</p>
-        <p class="hero__meta-item hero__meta-item--right reveal-fade">Portafolio<br><span class="js-year">2026</span></p>
+        <p class="hero__meta-item hero__meta-item--right reveal-fade">Portafolio <span class="js-year">2026</span></p>
       </div>
 
       <!-- NOMBRE GRANDE
@@ -201,10 +201,18 @@
         </h2>
       </header>
 
+      <div class="work__filters" role="group" aria-label="Filtrar proyectos por categoría">
+        <button class="work__filter is-active" type="button" data-project-filter="all" aria-pressed="true">Todos</button>
+        <button class="work__filter" type="button" data-project-filter="ux-ui" aria-pressed="false">UX/UI</button>
+        <button class="work__filter" type="button" data-project-filter="branding" aria-pressed="false">Branding</button>
+        <button class="work__filter" type="button" data-project-filter="packaging" aria-pressed="false">Packaging</button>
+        <button class="work__filter" type="button" data-project-filter="editorial" aria-pressed="false">Editorial</button>
+      </div>
+
       <div class="work__grid">
 
         <!-- PROYECTO 01 — CINÉFILO -->
-        <article class="project project--wide">
+        <article class="project project--wide" data-project-category="ux-ui">
           <a href="cinefilo.html" class="project__link" aria-label="Ver caso Cinéfilo">
             <figure class="project__media reveal-img">
               <img src="img/cinefilo/16-9%20cinefilo.png" alt="Identidad visual de Cinéfilo en presentaciones de escritorio y móvil">
@@ -223,14 +231,15 @@
         </article>
 
         <!-- PROYECTO 02 — LAFKEN -->
-        <article class="project project--tall">
+        <article class="project project--tall" data-project-category="packaging">
           <a href="lafken.html" class="project__link" aria-label="Ver caso Lafken">
             <figure class="project__media reveal-img">
               <img src="img/Lafken/Fotografia%20principal%20del%20packaging.jpg" alt="Botellas del packaging Lafken inspiradas en leyendas chilotas">
             </figure>
             <div class="project__info">
-              <h3 class="project__name">Lafken</h3>
+              <h3 class="project__name"><span class="lafken-logo lafken-logo--card"><img src="img/Lafken/logotipo-lafken.png" alt="Lafken"></span></h3>
               <p class="project__cat">Packaging</p>
+              <p class="project__desc">Packaging de cervezas artesanales inspirado en las leyendas chilotas.</p>
               <span class="project__cta" aria-hidden="true">
                 <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
                 <span class="project__cta-arrow">→</span>
@@ -240,19 +249,37 @@
         </article>
 
         <!-- PROYECTO 03 — CHANCHO EN PIEDRA -->
-        <article class="project project--square">
+        <article class="project project--square" data-project-category="branding">
           <a href="chancho-en-piedra.html" class="project__link" aria-label="Ver caso Chancho en Piedra">
             <figure class="project__media reveal-img">
-              <!-- ✏️ Imagen: <img src="img/chancho-en-piedra.jpg" alt="Vinilo Chancho en Piedra"> -->
-              <div class="ph ph--vinilo">
-                <span class="ph__record"></span>
-                <span class="ph__sleeve"></span>
-                <span class="ph__label">Imagen Chancho en Piedra · 1:1</span>
+              <div class="ph ph--white">
+                <span class="ph__label">Imagen del proyecto pendiente</span>
               </div>
             </figure>
             <div class="project__info">
               <h3 class="project__name">Chancho en Piedra</h3>
-              <p class="project__cat">Identidad visual · Álbum / Vinilo</p>
+              <p class="project__cat">Branding · Identidad visual</p>
+              <p class="project__desc">Identidad visual y diseño de álbum y vinilo para Chancho en Piedra.</p>
+              <span class="project__cta" aria-hidden="true">
+                <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
+                <span class="project__cta-arrow">→</span>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <!-- PROYECTO 04 — ALITAS EDITORIAL -->
+        <article class="project project--wide" data-project-category="editorial">
+          <a href="alitas-editorial.html" class="project__link" aria-label="Ver proyecto ALITAS editorial">
+            <figure class="project__media reveal-img">
+              <div class="ph ph--white">
+                <span class="ph__label">Tu pieza gráfica editorial · espacio para imagen</span>
+              </div>
+            </figure>
+            <div class="project__info">
+              <h3 class="project__name">ALITAS editorial</h3>
+              <p class="project__cat">Editorial · Diseño editorial</p>
+              <p class="project__desc">Espacio reservado para incorporar la pieza gráfica editorial.</p>
               <span class="project__cta" aria-hidden="true">
                 <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
                 <span class="project__cta-arrow">→</span>
@@ -299,7 +326,7 @@
         </h2>
 
         <div class="about__text reveal-up">
-          <p>Soy diseñadora gráfica en formación, con una mirada creativa que conecta diseño, tecnología y comunicación visual. Me interesa transformar ideas en soluciones que no solo se vean bien, sino que también tengan sentido y generen experiencias significativas.</p>
+          <p>Soy diseñadora gráfica, con una mirada creativa que conecta diseño, tecnología y comunicación visual. Me interesa transformar ideas en soluciones que no solo se vean bien, sino que también tengan sentido y generen experiencias significativas.</p>
           <p>Disfruto explorar el UX/UI, el branding y el packaging, combinando pensamiento visual, curiosidad y atención al detalle. Me motiva experimentar, descubrir nuevas posibilidades y encontrar formas de comunicar que conecten con las personas.</p>
           <p>Creo en el diseño como una herramienta para dar forma a ideas, resolver desafíos y crear experiencias con propósito.</p>
         </div>

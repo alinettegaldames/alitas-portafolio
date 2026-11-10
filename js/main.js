@@ -122,8 +122,10 @@ function setupThemes() {
         }
       });
     },
-    // La sección "activa" es la que cruza la mitad de la pantalla
-    { rootMargin: '-50% 0px -50% 0px' }
+    // En Cinéfilo el encabezado corto debe mantener su fondo hasta salir de la vista.
+    { rootMargin: document.body.classList.contains('case--cinefilo')
+      ? '0px 0px -90% 0px'
+      : '-50% 0px -50% 0px' }
   );
 
   sections.forEach((section) => themeObserver.observe(section));
@@ -152,6 +154,31 @@ function setupNav() {
 
     lastY = y;
   }, { passive: true });
+}
+
+function setupProjectFilters() {
+  const filters = [...document.querySelectorAll('[data-project-filter]')];
+  const projects = [...document.querySelectorAll('[data-project-category]')];
+  if (!filters.length || !projects.length) return;
+
+  filters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const selectedCategory = filter.dataset.projectFilter;
+      if (!selectedCategory) return;
+
+      filters.forEach((button) => {
+        const isSelected = button === filter;
+        button.classList.toggle('is-active', isSelected);
+        button.setAttribute('aria-pressed', String(isSelected));
+      });
+
+      projects.forEach((project) => {
+        const isVisible = selectedCategory === 'all'
+          || project.dataset.projectCategory === selectedCategory;
+        project.hidden = !isVisible;
+      });
+    });
+  });
 }
 
 
@@ -389,6 +416,7 @@ setYear();
 setupPageTransitions();
 setupThemes();
 setupNav();
+setupProjectFilters();
 setupMobileMenu();
 setupStatementReveal();
 setupContactModal();
