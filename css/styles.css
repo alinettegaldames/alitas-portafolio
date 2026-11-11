@@ -371,8 +371,10 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
 .nav__link span::after {
   content: attr(data-hover);
   position: absolute; left: 0; top: 100%;
-  color: var(--naranjo);
+  color: var(--azul);
 }
+body[data-theme="blue"] .nav__link span::after,
+body[data-theme="black"] .nav__link span::after { color: #c3d6ff; }
 .nav__link:hover span,
 .nav__link:focus-visible span { transform: translateY(-100%); }
 
@@ -384,7 +386,7 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
 }
 .nav__cta { border: 0; cursor: pointer; }
 .nav__cta:hover,
-.nav__cta:focus-visible { background: var(--naranjo); color: var(--negro); transform: translateY(-2px); }
+.nav__cta:focus-visible { background: var(--azul); color: var(--blanco); transform: translateY(-2px); }
 
 /* Botón hamburguesa (2 líneas que se convierten en X) */
 .nav__toggle {
@@ -393,7 +395,7 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
   transition: background-color .25s, color .25s;
 }
 .nav__toggle:hover,
-.nav__toggle:focus-visible { background: var(--naranjo); }
+.nav__toggle:focus-visible { background: var(--azul); color: var(--blanco); }
 .nav__toggle span {
   position: absolute; left: 25%; right: 25%; height: 1.5px; background: currentColor;
   transition: transform .35s var(--ease-out), top .35s var(--ease-out);
@@ -403,7 +405,7 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
 .menu-open .nav__toggle span:first-child { top: 50%; transform: rotate(45deg); }
 .menu-open .nav__toggle span:last-child  { top: 50%; transform: rotate(-45deg); }
 .menu-open .nav__toggle:hover,
-.menu-open .nav__toggle:focus-visible { background: var(--naranjo); color: var(--negro); }
+.menu-open .nav__toggle:focus-visible { background: var(--blanco); color: var(--azul); }
 
 /* Menú móvil a pantalla completa: baja como una cortina */
 .mobile-menu {
@@ -780,7 +782,7 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
   transition: background-color .25s, color .25s, border-color .25s, transform .25s;
 }
 .work__filter:hover,
-.work__filter:focus-visible { border-color: var(--azul); transform: translateY(-2px); }
+.work__filter:focus-visible { border-color: var(--azul); background: var(--azul); color: var(--blanco); transform: translateY(-2px); }
 .work__filter.is-active { border-color: var(--azul); background: var(--azul); color: var(--blanco); }
 .project[hidden] { display: none; }
 
@@ -799,6 +801,11 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
   background: var(--beige);
 }
 .project__media img { width: 100%; height: 100%; object-fit: cover; }
+.project__media .project__logo {
+  position: absolute; bottom: .75rem; right: .75rem; width: clamp(5rem, 18%, 10rem);
+  aspect-ratio: 1; pointer-events: none;
+}
+.project__media .project__logo img { width: 100%; height: 100%; object-fit: contain; }
 
 /* Formato 1 — PANORÁMICO (Cinéfilo): ocupa 7 columnas */
 .project--wide { grid-column: 1 / 8; }
@@ -812,6 +819,10 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
 .project--square { grid-column: 5 / 11; }
 .project--square .project__media { aspect-ratio: 1 / 1; }
 .project--wide:nth-child(4) { grid-column: 2 / 9; }
+.work__grid.is-filtered .project:not([hidden]) {
+  grid-column: 1 / 8;
+  margin-top: 0;
+}
 /* Información del proyecto */
 .project__info {
   display: grid;
@@ -862,9 +873,9 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
 
 /* --- HOVER EN PROYECTOS ---
    1) zoom sutil de la imagen  2) el texto cambia  3) la flecha gira */
-.project__media > * { transition: transform 1.2s var(--ease-out); }
-.project__link:hover .project__media.is-visible > *,
-.project__link:focus-visible .project__media.is-visible > * { transform: scale(1.05); }
+.project__media > :not(.project__logo) { transition: transform 1.2s var(--ease-out); }
+.project__link:hover .project__media.is-visible > :not(.project__logo),
+.project__link:focus-visible .project__media.is-visible > :not(.project__logo) { transform: scale(1.05); }
 
 .project__link:hover .project__cta-text,
 .project__link:focus-visible .project__cta-text { color: transparent; }
@@ -998,6 +1009,7 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
   .project--wide:nth-child(4) { grid-column: 3 / 11; }
   .project--tall   { grid-column: 7 / 13; margin-top: 0; } /* en tablet, Lafken baja a su propia fila */
   .project--square { grid-column: 3 / 11; }
+  .work__grid.is-filtered .project:not([hidden]) { grid-column: 1 / 9; }
   .badge { right: -1.5rem; }
 }
 
@@ -1045,6 +1057,7 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
   .project--wide:nth-child(4) { grid-column: 1 / -1; }
   .project--tall   { grid-column: 3 / -1; grid-row: auto; }
   .project--square { grid-column: 1 / 11; }
+  .work__grid.is-filtered .project:not([hidden]) { grid-column: 1 / -1; }
   .project__info { grid-template-columns: minmax(0, 1fr) auto; }
 
   .about__photo-wrap { grid-column: 1 / 11; }
@@ -1220,6 +1233,13 @@ body.is-leaving::after { transform: scaleY(1); }
   display: block; width: 100%; height: auto;
 }
 .case-title .line--indent { padding-left: 12vw; }
+.case-hero__description {
+  max-width: 62ch;
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.65;
+}
 
 /* Fila de datos bajo el título: categoría, año, etc. */
 .case-tags {
@@ -1339,6 +1359,8 @@ body.is-leaving::after { transform: scaleY(1); }
 .case-next__link:hover .case-next__title .line > span { color: var(--naranjo); }
 .case-next__media { grid-column: 8 / 13; grid-row: 1; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 4px; }
 .case-next__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
+.project__media .project-preview__image,
+.case-next__media .project-preview__image { object-fit: contain; background: var(--blanco); }
 .case-next__media--placeholder {
   display: grid; place-items: center; padding: 1.5rem;
   background: var(--beige); color: var(--negro);
@@ -1570,6 +1592,25 @@ body.is-leaving::after { transform: scaleY(1); }
 
 /* El vinilo sale de su funda hacia la derecha: recortamos lo que pase del borde */
 .case--chancho .case-hero { overflow-x: clip; }
+.chancho-heading {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(6rem, 30%);
+  gap: clamp(1rem, 4vw, 4rem); align-items: center;
+  margin: clamp(2rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.5rem);
+}
+.chancho-heading .case-title {
+  margin: 0; font-size: clamp(2.2rem, 7vw, 7.5rem); line-height: 1;
+  overflow-wrap: anywhere;
+}
+.chancho-heading__logo { width: 100%; height: auto; }
+@media (prefers-reduced-motion: no-preference) {
+  .chancho-logo-spin { animation: chancho-logo-spin 18s linear infinite; }
+}
+@keyframes chancho-logo-spin { to { transform: rotate(360deg); } }
+.case--chancho .gallery .media { background: var(--blanco); }
+@media (max-width: 600px) {
+  .chancho-heading { grid-template-columns: minmax(0, 1fr) 5.8rem; gap: .75rem; }
+  .chancho-heading .case-title { font-size: clamp(1.2rem, 6vw, 2.2rem); }
+}
 
 
 .case-next--return { min-height: 0; margin-top: 0; padding-top: 2rem; }

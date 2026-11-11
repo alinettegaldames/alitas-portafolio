@@ -159,12 +159,14 @@ function setupNav() {
 function setupProjectFilters() {
   const filters = [...document.querySelectorAll('[data-project-filter]')];
   const projects = [...document.querySelectorAll('[data-project-category]')];
-  if (!filters.length || !projects.length) return;
+  const grid = document.querySelector('.work__grid');
+  if (!filters.length || !projects.length || !grid) return;
 
   filters.forEach((filter) => {
     filter.addEventListener('click', () => {
       const selectedCategory = filter.dataset.projectFilter;
       if (!selectedCategory) return;
+      grid.classList.toggle('is-filtered', selectedCategory !== 'all');
 
       filters.forEach((button) => {
         const isSelected = button === filter;
