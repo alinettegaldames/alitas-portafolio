@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALITAS editorial — Alinette Galdames</title>
-  <meta name="description" content="Espacio para la pieza gráfica editorial de la identidad ALITAS.">
+  <meta name="description" content="Explora el portafolio editorial de ALITAS en una experiencia interactiva 3D.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/star-fold.css">
+  <link rel="stylesheet" href="css/editorial-3d.css">
+  <script type="importmap">{"imports":{"three":"./js/vendor/three.module.js"}}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -45,102 +46,53 @@
   </div>
 
   <main id="contenido">
-    <section class="case-hero" data-bg="orange">
+    <section class="case-hero" data-bg="white">
       <div class="case-hero__top reveal-fade">
         <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a>
       </div>
-      <h1 class="case-title"><span class="line"><span>ALITAS</span></span><span class="line"><span>editorial</span></span></h1>
+      <div class="chancho-heading">
+        <h1 class="case-title">ALITAS<br>editorial</h1>
+        <img class="chancho-heading__logo chancho-logo-spin" src="img/isotipo-alitas.svg" alt="Isotipo de ALITAS">
+      </div>
+      <p class="case-hero__description">Explora mi portafolio editorial, página por página.</p>
     </section>
 
-    <section class="star-fold" id="pieza-editorial" data-bg="white" aria-labelledby="star-fold-title">
-      <header class="star-fold__intro">
-        <p class="star-fold__eyebrow">ALITAS · Experimento editorial</p>
-        <h2 id="star-fold-title">Ideas que se despliegan.</h2>
-        <p>Un objeto editorial que abre mi universo creativo en seis direcciones. Explora cada pliegue y descubre los proyectos que le dan forma.</p>
+    <section class="editorial-object" id="editorial-3d" data-bg="white" aria-labelledby="editorial-object-title">
+      <header class="editorial-object__header">
+        <p class="editorial-object__eyebrow">ALITAS · Portafolio editorial</p>
+        <h2 id="editorial-object-title">Ideas que dan alas.</h2>
+        <p>Explora mi portafolio editorial, página por página.</p>
       </header>
-
-      <div class="star-fold__experience" data-star-fold>
-        <div class="star-fold__stage">
-          <div class="star-fold__scene" aria-label="Pieza editorial interactiva">
-            <div class="star-fold__object">
-              <div class="star-fold__star" aria-hidden="true">
-                <button type="button" class="star-fold__panel" style="--angle: 0deg; --order: 0" tabindex="-1" aria-label="Ver Branding"><span>Branding</span></button>
-                <button type="button" class="star-fold__panel" style="--angle: 60deg; --order: 1" tabindex="-1" aria-label="Ver UX/UI"><img src="img/cinefilo/16-9%20cinefilo.png" alt=""><span>UX/UI</span></button>
-                <button type="button" class="star-fold__panel" style="--angle: 120deg; --order: 2" tabindex="-1" aria-label="Ver Editorial"><span>Editorial</span></button>
-                <button type="button" class="star-fold__panel" style="--angle: 180deg; --order: 3" tabindex="-1" aria-label="Ver Packaging"><img src="img/Lafken/Fotografia%20principal%20del%20packaging.jpg" alt=""><span>Packaging</span></button>
-                <button type="button" class="star-fold__panel" style="--angle: 240deg; --order: 4" tabindex="-1" aria-label="Ver Fotografía"><span>Fotografía</span></button>
-                <button type="button" class="star-fold__panel" style="--angle: 300deg; --order: 5" tabindex="-1" aria-label="Ver Sobre mí"><img src="img/alinette-sobre-mi.png" alt=""><span>Sobre mí</span></button>
-                <div class="star-fold__center"><img src="img/isotipo-alitas.svg" alt=""></div>
-              </div>
-              <div class="star-fold__cover" aria-hidden="true">
-                <span class="star-fold__cover-index">01 / ALITAS</span>
-                <img src="img/logo-alitas.svg" alt="">
-                <span class="star-fold__cover-slogan">Ideas que<br>dan alas.</span>
-                <span class="star-fold__cover-shape"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="star-fold__controls">
-          <button type="button" class="star-fold__open" data-fold-toggle aria-expanded="false" aria-controls="star-fold-content">Abrir pieza <span aria-hidden="true">↗</span></button>
-          <div class="star-fold__rotate" role="group" aria-label="Girar la pieza">
-            <button type="button" data-fold-rotate="-45" aria-label="Girar hacia la izquierda">←</button>
-            <span>Girar</span>
-            <button type="button" data-fold-rotate="45" aria-label="Girar hacia la derecha">→</button>
-          </div>
-          <p>Arrastra la pieza para explorarla desde otro ángulo.</p>
-        </div>
-
-        <div class="star-fold__content" id="star-fold-content" hidden>
-          <div class="star-fold__sections" role="group" aria-label="Secciones de la pieza editorial">
-            <button type="button" data-fold-section="branding" aria-pressed="true">Branding</button>
-            <button type="button" data-fold-section="ux" aria-pressed="false">UX/UI</button>
-            <button type="button" data-fold-section="editorial" aria-pressed="false">Editorial</button>
-            <button type="button" data-fold-section="packaging" aria-pressed="false">Packaging</button>
-            <button type="button" data-fold-section="fotografia" aria-pressed="false">Fotografía</button>
-            <button type="button" data-fold-section="sobre-mi" aria-pressed="false">Sobre mí</button>
-          </div>
-
-          <!-- Cambia textos, rutas de imagen y enlaces en cada sección cuando tengas material nuevo. -->
-          <article class="star-fold__detail" data-fold-detail="branding">
-            <div><p class="star-fold__eyebrow">01 / Identidad</p><h3>Branding</h3><p>Identidades visuales que dan carácter y sentido a cada idea.</p><a href="chancho-en-piedra.html">Ver Chancho en Piedra ↗</a></div>
-            <div class="star-fold__placeholder"><span>Imagen del proyecto pendiente</span></div>
-          </article>
-          <article class="star-fold__detail" data-fold-detail="ux" hidden>
-            <div><p class="star-fold__eyebrow">02 / Experiencia digital</p><h3>UX/UI</h3><p>Interfaces pensadas para conectar personas, historias y experiencias.</p><a href="cinefilo.html">Explorar Cinéfilo ↗</a></div>
-            <img src="img/cinefilo/16-9%20cinefilo.png" alt="Interfaz de Cinéfilo en pantallas de escritorio y móvil" loading="lazy">
-          </article>
-          <article class="star-fold__detail" data-fold-detail="editorial" hidden>
-            <div><p class="star-fold__eyebrow">03 / Narrativa visual</p><h3>Editorial</h3><p>Ideas que encuentran su ritmo a través de la composición, la imagen y la tipografía.</p></div>
-            <div class="star-fold__placeholder"><span>Espacio para la pieza editorial</span></div>
-          </article>
-          <article class="star-fold__detail" data-fold-detail="packaging" hidden>
-            <div><p class="star-fold__eyebrow">04 / Objeto e identidad</p><h3>Packaging</h3><p>Diseño de envases que transforma historias en experiencias tangibles.</p><a href="lafken.html">Explorar Lafken ↗</a></div>
-            <img src="img/Lafken/Fotografia%20principal%20del%20packaging.jpg" alt="Colección de cervezas Lafken" loading="lazy">
-          </article>
-          <article class="star-fold__detail" data-fold-detail="fotografia" hidden>
-            <div><p class="star-fold__eyebrow">05 / Mirada</p><h3>Fotografía</h3><p>Un espacio para imágenes que observan, registran y cuentan historias.</p></div>
-            <div class="star-fold__placeholder"><span>Fotografías pendientes</span></div>
-          </article>
-          <article class="star-fold__detail" data-fold-detail="sobre-mi" hidden>
-            <div><p class="star-fold__eyebrow">06 / La persona detrás</p><h3>Sobre mí</h3><p>Soy Alinette, diseñadora gráfica. Exploro la creatividad para dar forma a ideas con propósito.</p><a href="index.html#sobre-mi">Conoce más sobre mí ↗</a></div>
-            <img src="img/alinette-sobre-mi.png" alt="Retrato de Alinette con la identidad visual de ALITAS" loading="lazy">
-          </article>
-        </div>
+      <div class="editorial-object__stage" data-editorial-stage tabindex="0" role="group" aria-label="Portafolio editorial interactivo en tres dimensiones" aria-describedby="editorial-object-help">
+        <div class="editorial-object__canvas" data-editorial-canvas></div>
+        <p class="editorial-object__status" data-editorial-status role="status">Cargando la experiencia 3D…</p>
       </div>
-      <noscript><p>Activa JavaScript para abrir y explorar la pieza editorial interactiva.</p></noscript>
-    </section>
-
-    <section class="case-section" data-bg="white">
-      <div class="gallery">
-        <figure class="g-12">
-          <div class="media media--16x9 reveal-img">
-            <div class="ph ph--white"><span class="ph__label">Pieza gráfica editorial · espacio para imagen</span></div>
-          </div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Espacio reservado para incorporar la pieza gráfica editorial.</figcaption>
-        </figure>
+      <div class="editorial-object__controls" aria-label="Controles del portafolio">
+        <button type="button" class="editorial-object__primary" data-editorial-toggle aria-expanded="false" disabled>Abrir portafolio</button>
+        <p id="editorial-object-help">Toca una página para pasarla · arrastra para girar · usa la rueda o pellizca para acercar · mueve con dos dedos para explorar los detalles. Con el teclado, enfoca el libro y usa las flechas para pasar páginas y + o − para acercar.</p>
       </div>
+      <details class="editorial-object__flat">
+        <summary>Ver las 15 páginas en plano</summary>
+        <p><a href="Portafolio%20editorial.pdf" target="_blank" rel="noopener">Abrir el PDF original completo ↗</a></p>
+        <div class="editorial-object__flat-grid">
+          <figure><img src="assets/editorial/pages/pagina-01.jpg" alt="Página 1: portada del portafolio" loading="lazy"><figcaption>01 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-02.jpg" alt="Página 2: presentación de Alinette" loading="lazy"><figcaption>02 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-03.jpg" alt="Página 3: presentación de Cinéfilo" loading="lazy"><figcaption>03 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-04.jpg" alt="Página 4: diseño de la plataforma Cinéfilo" loading="lazy"><figcaption>04 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-05.jpg" alt="Página 5: piezas de Cinéfilo" loading="lazy"><figcaption>05 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-06.jpg" alt="Página 6: presentación de Lafken" loading="lazy"><figcaption>06 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-07.jpg" alt="Página 7: diseños de packaging Lafken" loading="lazy"><figcaption>07 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-08.jpg" alt="Página 8: línea de cervezas Lafken" loading="lazy"><figcaption>08 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-09.jpg" alt="Página 9: aplicaciones de la identidad Lafken" loading="lazy"><figcaption>09 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-10.jpg" alt="Página 10: presentación de Chancho en Piedra" loading="lazy"><figcaption>10 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-11.jpg" alt="Página 11: identidad visual y piezas del vinilo" loading="lazy"><figcaption>11 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-12.jpg" alt="Página 12: galería de Chancho en Piedra" loading="lazy"><figcaption>12 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-13.jpg" alt="Página 13: edición de República Marrana" loading="lazy"><figcaption>13 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-14.jpg" alt="Página 14: contacto de Alinette" loading="lazy"><figcaption>14 / 15</figcaption></figure>
+          <figure><img src="assets/editorial/pages/pagina-15.jpg" alt="Página 15: cierre con isotipo ALITAS" loading="lazy"><figcaption>15 / 15</figcaption></figure>
+        </div>
+      </details>
+      <noscript><p>La vista 3D necesita JavaScript. Puedes explorar el contenido en plano.</p></noscript>
     </section>
 
     <section class="case-next" data-bg="blue">
@@ -158,6 +110,6 @@
   </main>
 
   <script src="js/main.js"></script>
-  <script src="js/star-fold.js"></script>
+  <script type="module" src="js/editorial-3d.js" onerror="document.querySelector('[data-editorial-status]').textContent = 'No se pudo cargar la vista 3D. Puedes revisar las páginas en plano.'; document.querySelector('.editorial-object__flat').open = true;"></script>
 </body>
 </html>

@@ -373,7 +373,7 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
   position: absolute; left: 0; top: 100%;
   color: var(--azul);
 }
-body[data-theme="blue"] .nav__link span::after,
+body[data-theme="blue"] .nav__link span::after { color: var(--naranjo); }
 body[data-theme="black"] .nav__link span::after { color: #c3d6ff; }
 .nav__link:hover span,
 .nav__link:focus-visible span { transform: translateY(-100%); }
@@ -387,6 +387,8 @@ body[data-theme="black"] .nav__link span::after { color: #c3d6ff; }
 .nav__cta { border: 0; cursor: pointer; }
 .nav__cta:hover,
 .nav__cta:focus-visible { background: var(--azul); color: var(--blanco); transform: translateY(-2px); }
+body[data-theme="blue"] .nav__cta:hover,
+body[data-theme="blue"] .nav__cta:focus-visible { background: var(--naranjo); color: var(--negro); }
 
 /* Botón hamburguesa (2 líneas que se convierten en X) */
 .nav__toggle {
@@ -396,6 +398,8 @@ body[data-theme="black"] .nav__link span::after { color: #c3d6ff; }
 }
 .nav__toggle:hover,
 .nav__toggle:focus-visible { background: var(--azul); color: var(--blanco); }
+body[data-theme="blue"]:not(.menu-open) .nav__toggle:hover,
+body[data-theme="blue"]:not(.menu-open) .nav__toggle:focus-visible { background: var(--naranjo); color: var(--negro); }
 .nav__toggle span {
   position: absolute; left: 25%; right: 25%; height: 1.5px; background: currentColor;
   transition: transform .35s var(--ease-out), top .35s var(--ease-out);
@@ -802,7 +806,7 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
 }
 .project__media img { width: 100%; height: 100%; object-fit: cover; }
 .project__media .project__logo {
-  position: absolute; bottom: .75rem; right: .75rem; width: clamp(5rem, 18%, 10rem);
+  position: absolute; bottom: .75rem; right: .75rem; width: clamp(6.5rem, 25%, 14rem);
   aspect-ratio: 1; pointer-events: none;
 }
 .project__media .project__logo img { width: 100%; height: 100%; object-fit: contain; }
@@ -1354,7 +1358,12 @@ body.is-leaving::after { transform: scaleY(1); }
   display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 1.25rem; row-gap: 2rem;
   align-items: end; margin-top: 2rem;
 }
-.case-next__title { grid-column: 1 / 8; grid-row: 1; font-family: var(--font-title); font-size: clamp(3rem, 10vw, 11rem); }
+.case-next__title {
+  grid-column: 1 / 8; grid-row: 1; min-width: 0;
+  font-family: var(--font-title); font-size: clamp(3rem, 10vw, 11rem);
+  font-weight: 800; letter-spacing: -0.055em; line-height: .88;
+  overflow-wrap: break-word;
+}
 .case-next__title .line > span { transition: transform 1.2s var(--ease-out), color .5s; }
 .case-next__link:hover .case-next__title .line > span { color: var(--naranjo); }
 .case-next__media { grid-column: 8 / 13; grid-row: 1; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 4px; }
@@ -1591,6 +1600,10 @@ body.is-leaving::after { transform: scaleY(1); }
 .gallery--process   { margin-top: clamp(3rem, 7vw, 6rem); }
 
 /* El vinilo sale de su funda hacia la derecha: recortamos lo que pase del borde */
+.case--chancho .case-hero,
+.case--editorial .case-hero { background: var(--blanco); color: var(--negro); }
+.case--chancho .case-hero__top,
+.case--editorial .case-hero__top { border-color: rgba(29,29,27,.15); }
 .case--chancho .case-hero { overflow-x: clip; }
 .chancho-heading {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(6rem, 30%);
