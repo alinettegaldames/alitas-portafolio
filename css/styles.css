@@ -1237,6 +1237,13 @@ body.is-leaving::after { transform: scaleY(1); }
   display: block; width: 100%; height: auto;
 }
 .case-title .line--indent { padding-left: 12vw; }
+.case-collaborators {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: .3rem;
+  margin: 0 0 1.25rem; padding: .45rem .8rem;
+  border: 1px solid var(--line-color); border-radius: 999px;
+  font-family: var(--font-body); font-size: .72rem; line-height: 1.4;
+}
+.case-collaborators span { font-weight: 700; }
 .case-hero__description {
   max-width: 62ch;
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
