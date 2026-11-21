@@ -12,11 +12,12 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/editorial-3d.css">
+  <link rel="stylesheet" href="css/project-editorial.css">
   <script type="importmap">{"imports":{"three":"./js/vendor/three.module.js"}}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="case case--editorial is-entering">
+<body class="case case--editorial case-editorial project-template is-entering">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="nav" id="nav">
@@ -46,23 +47,21 @@
   </div>
 
   <main id="contenido">
-    <section class="case-hero" data-bg="white">
+    <section class="project-header" data-bg="white">
       <div class="case-hero__top reveal-fade">
         <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a>
       </div>
-      <div class="chancho-heading">
-        <h1 class="case-title">ALITAS<br>editorial</h1>
-        <img class="chancho-heading__logo chancho-logo-spin" src="img/isotipo-alitas.svg" alt="Isotipo de ALITAS">
+      <div class="project-header__heading">
+        <div><p class="project-header__meta">Editorial · Diseño editorial</p><h1>ALITAS editorial</h1></div>
+        <div class="project-header__mark"><img class="chancho-logo-spin" src="img/isotipo-alitas.svg" alt="Isotipo de ALITAS"></div>
       </div>
-      <p class="case-hero__description">Explora mi portafolio editorial, página por página.</p>
+      <p class="project-header__description">Un recorrido por mi portafolio editorial, página por página.</p>
+      <p class="project-header__team"><strong>Colaboradores:</strong> Alinette Galdames</p>
+      <details class="project-details"><summary>Más sobre el proyecto</summary><div class="project-details__content"><h2>Ideas que dan alas.</h2><p>Explora mi portafolio editorial, página por página, en una experiencia interactiva 3D.</p></div></details>
     </section>
 
-    <section class="editorial-object" id="editorial-3d" data-bg="white" aria-labelledby="editorial-object-title">
-      <header class="editorial-object__header">
-        <p class="editorial-object__eyebrow">ALITAS · Portafolio editorial</p>
-        <h2 id="editorial-object-title">Ideas que dan alas.</h2>
-        <p>Explora mi portafolio editorial, página por página.</p>
-      </header>
+    <section class="project-gallery editorial-object" id="editorial-3d" data-bg="white" aria-labelledby="editorial-object-title">
+      <header class="project-gallery__head"><h2 id="editorial-object-title">Galería</h2><p>ALITAS · Portafolio editorial interactivo.</p></header>
       <div class="editorial-object__stage" data-editorial-stage tabindex="0" role="group" aria-label="Portafolio editorial interactivo en tres dimensiones" aria-describedby="editorial-object-help">
         <div class="editorial-object__canvas" data-editorial-canvas></div>
         <p class="editorial-object__status" data-editorial-status role="status">Cargando la experiencia 3D…</p>
@@ -71,25 +70,25 @@
         <button type="button" class="editorial-object__primary" data-editorial-toggle aria-expanded="false" disabled>Abrir portafolio</button>
         <p id="editorial-object-help">Toca una página para pasarla · arrastra para girar · usa la rueda o pellizca para acercar · mueve con dos dedos para explorar los detalles. Con el teclado, enfoca el libro y usa las flechas para pasar páginas y + o − para acercar.</p>
       </div>
-      <details class="editorial-object__flat">
+      <details class="editorial-object__flat" open>
         <summary>Ver las 15 páginas en plano</summary>
         <p><a href="Portafolio%20editorial.pdf" target="_blank" rel="noopener">Abrir el PDF original completo ↗</a></p>
-        <div class="editorial-object__flat-grid">
-          <figure><img src="assets/editorial/pages/pagina-01.jpg" alt="Página 1: portada del portafolio" loading="lazy"><figcaption>01 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-02.jpg" alt="Página 2: presentación de Alinette" loading="lazy"><figcaption>02 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-03.jpg" alt="Página 3: presentación de Cinéfilo" loading="lazy"><figcaption>03 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-04.jpg" alt="Página 4: diseño de la plataforma Cinéfilo" loading="lazy"><figcaption>04 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-05.jpg" alt="Página 5: piezas de Cinéfilo" loading="lazy"><figcaption>05 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-06.jpg" alt="Página 6: presentación de Lafken" loading="lazy"><figcaption>06 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-07.jpg" alt="Página 7: diseños de packaging Lafken" loading="lazy"><figcaption>07 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-08.jpg" alt="Página 8: línea de cervezas Lafken" loading="lazy"><figcaption>08 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-09.jpg" alt="Página 9: aplicaciones de la identidad Lafken" loading="lazy"><figcaption>09 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-10.jpg" alt="Página 10: presentación de Chancho en Piedra" loading="lazy"><figcaption>10 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-11.jpg" alt="Página 11: identidad visual y piezas del vinilo" loading="lazy"><figcaption>11 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-12.jpg" alt="Página 12: galería de Chancho en Piedra" loading="lazy"><figcaption>12 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-13.jpg" alt="Página 13: edición de República Marrana" loading="lazy"><figcaption>13 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-14.jpg" alt="Página 14: contacto de Alinette" loading="lazy"><figcaption>14 / 15</figcaption></figure>
-          <figure><img src="assets/editorial/pages/pagina-15.jpg" alt="Página 15: cierre con isotipo ALITAS" loading="lazy"><figcaption>15 / 15</figcaption></figure>
+        <div class="gallery">
+          <figure class="g-12"><div class="project-image"><img src="assets/editorial/pages/pagina-01.jpg" alt="Página 1: portada del portafolio" loading="lazy"></div><figcaption class="caption">01 / 15 · Portada del portafolio.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-02.jpg" alt="Página 2: presentación de Alinette" loading="lazy"></div><figcaption class="caption">02 / 15 · Presentación de Alinette.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-03.jpg" alt="Página 3: presentación de Cinéfilo" loading="lazy"></div><figcaption class="caption">03 / 15 · Presentación de Cinéfilo.</figcaption></figure>
+          <figure class="g-7"><div class="project-image"><img src="assets/editorial/pages/pagina-04.jpg" alt="Página 4: diseño de la plataforma Cinéfilo" loading="lazy"></div><figcaption class="caption">04 / 15 · Diseño de la plataforma Cinéfilo.</figcaption></figure>
+          <figure class="g-5"><div class="project-image"><img src="assets/editorial/pages/pagina-05.jpg" alt="Página 5: piezas de Cinéfilo" loading="lazy"></div><figcaption class="caption">05 / 15 · Piezas de Cinéfilo.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-06.jpg" alt="Página 6: presentación de Lafken" loading="lazy"></div><figcaption class="caption">06 / 15 · Presentación de Lafken.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-07.jpg" alt="Página 7: diseños de packaging Lafken" loading="lazy"></div><figcaption class="caption">07 / 15 · Diseños de packaging Lafken.</figcaption></figure>
+          <figure class="g-7"><div class="project-image"><img src="assets/editorial/pages/pagina-08.jpg" alt="Página 8: línea de cervezas Lafken" loading="lazy"></div><figcaption class="caption">08 / 15 · Línea de cervezas Lafken.</figcaption></figure>
+          <figure class="g-5"><div class="project-image"><img src="assets/editorial/pages/pagina-09.jpg" alt="Página 9: aplicaciones de la identidad Lafken" loading="lazy"></div><figcaption class="caption">09 / 15 · Aplicaciones de la identidad Lafken.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-10.jpg" alt="Página 10: presentación de Chancho en Piedra" loading="lazy"></div><figcaption class="caption">10 / 15 · Presentación de Chancho en Piedra.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-11.jpg" alt="Página 11: identidad visual y piezas del vinilo" loading="lazy"></div><figcaption class="caption">11 / 15 · Identidad visual y piezas del vinilo.</figcaption></figure>
+          <figure class="g-7"><div class="project-image"><img src="assets/editorial/pages/pagina-12.jpg" alt="Página 12: galería de Chancho en Piedra" loading="lazy"></div><figcaption class="caption">12 / 15 · Galería de Chancho en Piedra.</figcaption></figure>
+          <figure class="g-5"><div class="project-image"><img src="assets/editorial/pages/pagina-13.jpg" alt="Página 13: edición de República Marrana" loading="lazy"></div><figcaption class="caption">13 / 15 · Edición de República Marrana.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-14.jpg" alt="Página 14: contacto de Alinette" loading="lazy"></div><figcaption class="caption">14 / 15 · Contacto de Alinette.</figcaption></figure>
+          <figure class="g-6"><div class="project-image"><img src="assets/editorial/pages/pagina-15.jpg" alt="Página 15: cierre con isotipo ALITAS" loading="lazy"></div><figcaption class="caption">15 / 15 · Cierre con isotipo ALITAS.</figcaption></figure>
         </div>
       </details>
       <noscript><p>La vista 3D necesita JavaScript. Puedes explorar el contenido en plano.</p></noscript>

@@ -13,11 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project-editorial.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <!-- "case--lafken" = estilos propios de este caso (fotografía a sangre) -->
-<body class="case case--lafken is-entering">
+<body class="case case--lafken case-editorial project-template is-entering">
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -52,16 +53,20 @@
 
 
   <main id="contenido">
-    <section class="case-hero" data-bg="black">
+    <section class="project-header" data-bg="white">
       <div class="case-hero__top reveal-fade">
         <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a>
       </div>
-      <h1 class="case-title"><span class="line"><span class="lafken-logo lafken-logo--hero"><img src="img/Lafken/logotipo-lafken.png" alt="Lafken"></span></span></h1>
-      <p class="case-collaborators"><span>Colaboradores:</span> Constanza Díaz, Felipe Stuven y Alinette Galdames</p>
-      <p class="case-hero__description">Lafken es una propuesta de packaging para cervezas artesanales que lleva las leyendas chilotas a una colección de envases y etiquetas ilustradas.</p>
+      <div class="project-header__heading">
+        <div><p class="project-header__meta">Branding · Packaging</p><h1>Lafken</h1></div>
+      </div>
+      <p class="project-header__description">Packaging de cervezas artesanales inspirado en leyendas chilotas.</p>
+      <p class="project-header__team"><strong>Colaboradores:</strong> Constanza Díaz, Felipe Stuven y Alinette Galdames</p>
+      <details class="project-details"><summary>Más sobre el proyecto</summary><div class="project-details__content"><h2>Leyendas que toman forma.</h2><p>Lafken es una propuesta de packaging para cervezas artesanales que lleva las leyendas chilotas a una colección de envases y etiquetas ilustradas.</p><h3>Objetivo y enfoque</h3><p>La propuesta traslada las leyendas a una identidad visual mediante ilustraciones aplicadas a etiquetas, envases y piezas gráficas.</p></div></details>
     </section>
 
-    <section class="case-section" data-bg="white">
+    <section class="project-gallery" data-bg="white" aria-labelledby="galeria-titulo">
+      <header class="project-gallery__head"><h2 id="galeria-titulo">Galería</h2><p>Identidad, packaging y aplicaciones.</p></header>
       <div class="gallery">
         <figure class="g-12">
           <div class="media media--16x9 reveal-img hover-zoom"><img src="img/Lafken/Fotografia%20principal%20del%20packaging.jpg" alt="Cinco botellas del packaging Lafken frente a un paisaje chilote"></div>
@@ -71,13 +76,13 @@
           <div class="media media--21x9 reveal-img hover-zoom"><img src="img/Lafken/Panoramica.png" alt="Panorámica de la colección de cervezas Lafken junto a una ilustración del Basilisco"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Vista panorámica de la colección junto al Basilisco.</figcaption>
         </figure>
-        <figure class="g-5">
+        <figure class="g-6">
           <div class="media media--4x5 reveal-img hover-zoom"><img src="img/Lafken/Envase%201.png" alt="Botella Lafken con etiqueta inspirada en una leyenda chilota"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Botella El Trauco con su etiqueta ilustrada.</figcaption>
         </figure>
-        <figure class="g-5 g-push">
+        <figure class="g-6">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/foto%20detalle%20lafken.jpg" alt="Detalle de la etiqueta Lafken Pincoya en una botella"></div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Detalle de la etiqueta La Pincoya.</figcaption>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Detalle de la etiqueta ilustrada La Pincoya.</figcaption>
         </figure>
         <figure class="g-6">
           <div class="media media--4x5 reveal-img hover-zoom"><img src="img/Lafken/Packaging%20lafken.png" alt="Caja de presentación de cervezas Lafken con etiquetas inspiradas en leyendas chilotas"></div>
@@ -87,23 +92,23 @@
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/storie.jpg" alt="Historia de redes sociales de Lafken con una botella y una ilustración del Basilisco"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Pieza para redes sociales con una botella y el Basilisco.</figcaption>
         </figure>
-        <figure class="g-5">
+        <figure class="g-6">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/Ilustraci%C3%B3n%20para%20etiquetas.JPG" alt="Ilustración de una leyenda chilota creada para las etiquetas Lafken"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Ilustración de una leyenda chilota para las etiquetas.</figcaption>
         </figure>
-        <figure class="g-5 g-push">
+        <figure class="g-6">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/arte%20final.png" alt="Arte final de las ilustraciones para la colección Lafken"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Arte final de las ilustraciones de la colección.</figcaption>
         </figure>
-        <figure class="g-5">
+        <figure class="g-6">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/Cervezas%20lata.png" alt="Cervezas Lafken en lata con sus etiquetas ilustradas"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Latas Lafken con las etiquetas ilustradas.</figcaption>
         </figure>
-        <figure class="g-5 g-push">
+        <figure class="g-6">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/llaveros.png" alt="Llaveros y destapadores con ilustraciones de las leyendas Lafken"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Llaveros y destapadores con ilustraciones Lafken.</figcaption>
         </figure>
-        <figure class="g-5">
+        <figure class="g-8 g-start-3">
           <div class="media media--1x1 reveal-img hover-zoom"><img src="img/Lafken/Posavasos.png" alt="Colección de posavasos Lafken con ilustraciones de leyendas chilotas"></div>
           <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Posavasos ilustrados con leyendas chilotas.</figcaption>
         </figure>

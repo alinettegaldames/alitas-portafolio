@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project-editorial.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="case case--conectahuellas is-entering">
+<body class="case case--conectahuellas case-editorial project-template is-entering">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -35,165 +36,60 @@
   </div>
 
   <main id="contenido">
-    <section class="case-hero conecta-hero" data-bg="white" aria-labelledby="conecta-title">
+    <section class="project-header" data-bg="white" aria-labelledby="conecta-title">
       <div class="case-hero__top reveal-fade">
         <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow" aria-hidden="true">←</span> Todos los proyectos</a>
       </div>
-      <div class="conecta-hero__grid">
-        <div class="conecta-hero__copy">
-          <p class="conecta-eyebrow">Caso de estudio <span aria-hidden="true">/</span> Talagante, Chile</p>
-          <h1 class="case-title" id="conecta-title">Conecta<br>Huellas</h1>
-          <ul class="case-tags">
-            <li>UX/UI Design</li>
-            <li>Diseño de interacción</li>
-          </ul>
-          <p class="case-hero__description">Una propuesta digital y gráfica para visibilizar criaderos ilegales, orientar las denuncias ciudadanas y promover la protección animal en Talagante.</p>
-          <p class="case-collaborators"><span>Diseño y desarrollo del proyecto:</span> Alinette Galdames y Constanza Díaz</p>
-          <a class="conecta-hero__link" href="#conecta-interfaz">Explorar la propuesta <span aria-hidden="true">↓</span></a>
-        </div>
-        <figure class="conecta-hero__figure">
-          <p class="conecta-visual-label">Propuesta visual <span aria-hidden="true">/</span> contenido de muestra</p>
-          <div class="conecta-hero__image-frame">
-            <img src="img/conectahuellas/interfaz-final-inicio.jpg" alt="Propuesta de interfaz de ConectaHuellas con navegación, módulos de apoyo y fichas de animales de ejemplo" fetchpriority="high">
-          </div>
-          <figcaption>Propuesta de interfaz del informe. Cifras, perfiles y módulos visibles son contenido de muestra, no resultados medidos ni funciones en operación.</figcaption>
-        </figure>
+      <div class="project-header__heading">
+        <div><p class="project-header__meta">UX/UI · Diseño de interacción</p><h1 id="conecta-title">ConectaHuellas</h1></div>
       </div>
-    </section>
-
-    <section class="conecta-section conecta-section--context" data-bg="beige" aria-labelledby="conecta-context-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">01 <span>—</span> Contexto</p>
-        <h2 id="conecta-context-title">Una conexión para actuar mejor.</h2>
-        <p class="conecta-section__intro">El proyecto plantea una plataforma que acerque a vecinos, organizaciones de rescate y entidades públicas frente a situaciones de riesgo animal.</p>
-      </header>
-      <div class="conecta-context__grid">
-        <div class="conecta-context__story">
+      <p class="project-header__description">Propuesta digital para orientar denuncias y promover la protección animal en Talagante.</p>
+      <p class="project-header__team"><strong>Colaboradores:</strong> Alinette Galdames y Constanza Díaz</p>
+      <details class="project-details"><summary>Más sobre el proyecto</summary><div class="project-details__content">
+          <p>Caso de estudio / Talagante, Chile</p>
+          <p>Una propuesta digital y gráfica para visibilizar criaderos ilegales, orientar las denuncias ciudadanas y promover la protección animal en Talagante.</p>
+          <h2 id="conecta-context-title">Una conexión para actuar mejor.</h2>
+          <p>El proyecto plantea una plataforma que acerque a vecinos, organizaciones de rescate y entidades públicas frente a situaciones de riesgo animal.</p>
           <h3>El desafío</h3>
           <p>El informe identifica canales de denuncia poco claros, desinformación y una fiscalización limitada en sectores rurales y periurbanos. A esto se suma la sobrecarga de las organizaciones de rescate.</p>
           <h3>La respuesta propuesta</h3>
           <p>Centralizar orientación y denuncias, facilitar la derivación de casos y sumar contenidos de educación preventiva mediante una experiencia digital accesible.</p>
-        </div>
-        <dl class="conecta-facts">
-          <div><dt>Territorio</dt><dd>Talagante, Chile</dd></div>
-          <div><dt>Enfoque</dt><dd>Protección y bienestar animal</dd></div>
-          <div><dt>Encuesta</dt><dd>21 residentes</dd></div>
-        </dl>
-      </div>
-      <p class="conecta-note">La encuesta fue exploratoria y no representa estadísticamente a toda la población de Talagante.</p>
+          <p>Territorio: Talagante, Chile · Enfoque: protección y bienestar animal · Encuesta: 21 residentes.</p>
+          <p>La encuesta fue exploratoria y no representa estadísticamente a toda la población de Talagante.</p>
+          <h2 id="conecta-research-title">Entender antes de diseñar.</h2>
+          <p>La exploración destaca necesidades de orientación confiable, denuncia anónima y educación para tomar decisiones responsables.</p>
+          <p>Los mapas de empatía del informe son perfiles de trabajo, no testimonios de participantes reales.</p>
+          <ul><li>Contar con un canal claro para reportar una situación sin exponerse.</li><li>Recibir orientación y seguimiento comprensibles durante el proceso.</li><li>Acceder a información preventiva sobre bienestar y tenencia responsable.</li></ul>
+          <h2 id="conecta-flow-title">De una alerta a una derivación.</h2>
+          <p>El informe plantea un recorrido de denuncia y coordinación entre ciudadanía, fundaciones y organismos competentes.</p>
+          <h3>Reportar</h3><p>La persona entrega información de una posible situación de riesgo.</p>
+          <h3>Evaluar</h3><p>La propuesta contempla una revisión inicial por parte de una organización de rescate.</p>
+          <h3>Derivar</h3><p>Según el caso, se considera coordinar apoyo con rescatistas, municipio u organismos pertinentes.</p>
+          <p>Este recorrido describe la propuesta del informe. No implica que el servicio esté activo ni que haya sido validado formalmente con integrantes de la fundación.</p>
+          <h2 id="conecta-wireframes-title">Primero, ordenar la experiencia.</h2>
+          <p>Wireframes originales para navegador y celular. Muestran jerarquía y módulos antes de aplicar la interfaz visual.</p>
+          <h2 id="conecta-interface-title">Una propuesta visual cercana y clara.</h2>
+          <p>Las pantallas finales priorizan navegación directa, información legible y acceso a los recorridos principales.</p>
+          <h2 id="conecta-identity-title">Una identidad amable y reconocible.</h2>
+          <p>El sistema combina una paleta cálida, tipografía expresiva e iconografía para diferenciar los módulos de la plataforma.</p>
+          <p>El informe señala que los iconos aún requerían pruebas de usabilidad antes de una posible implementación.</p>
+      </div></details>
+      <a class="project-header__link" href="#conecta-interfaz">Explorar la propuesta <span aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="conecta-section conecta-section--research" data-bg="white" aria-labelledby="conecta-research-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">02 <span>—</span> Investigación</p>
-        <h2 id="conecta-research-title">Entender antes de diseñar.</h2>
-        <p class="conecta-section__intro">La exploración destaca necesidades de orientación confiable, denuncia anónima y educación para tomar decisiones responsables.</p>
-      </header>
-      <ul class="conecta-findings" aria-label="Hallazgos documentados">
-        <li><span>01</span><p>Contar con un canal claro para reportar una situación sin exponerse.</p></li>
-        <li><span>02</span><p>Recibir orientación y seguimiento comprensibles durante el proceso.</p></li>
-        <li><span>03</span><p>Acceder a información preventiva sobre bienestar y tenencia responsable.</p></li>
-      </ul>
-      <div class="conecta-maps__head">
-        <h3>Mapas de empatía</h3>
-        <p>Perfiles de trabajo incluidos en el informe; no se presentan como testimonios de participantes reales.</p>
+    <section class="project-gallery" data-bg="white" aria-labelledby="conecta-gallery-title">
+      <header class="project-gallery__head"><h2 id="conecta-gallery-title">Galería</h2><p>Wireframes y pantallas de la propuesta.</p></header>
+      <p class="project-gallery__note">Las pantallas muestran una propuesta, no un sitio desplegado: las cifras, perfiles, módulos, fichas y datos de contacto son contenido de muestra. Adopción y donaciones son ideas para etapas futuras.</p>
+      <div class="gallery">
+        <figure class="g-12" id="conecta-interfaz"><div class="project-image"><img src="img/conectahuellas/pantalla-inicio.jpg" alt="Inicio de la propuesta ConectaHuellas con navegación y accesos principales" width="1600" height="760" fetchpriority="high"></div><figcaption class="caption">Pantalla de inicio y accesos principales. <a href="img/conectahuellas/pantallas-propuesta-completa.jpg">Ver la propuesta completa ↗</a></figcaption></figure>
+        <figure class="g-7"><div class="project-image"><img src="img/conectahuellas/pantalla-modulos.jpg" alt="Módulos de denuncia, comunidad, fundaciones y recursos de ConectaHuellas" width="1600" height="1100" loading="lazy"></div><figcaption class="caption">Módulos para explorar las distintas formas de participación.</figcaption></figure>
+        <figure class="g-5"><div class="project-image"><img src="img/conectahuellas/pantalla-adopcion.jpg" alt="Tarjetas de mascotas destacadas en la propuesta de adopción" width="1600" height="800" loading="lazy"></div><figcaption class="caption">Mascotas destacadas y acceso a sus perfiles de adopción.</figcaption></figure>
+        <figure class="g-7"><div class="project-image"><img src="img/conectahuellas/pantalla-denuncia.jpg" alt="Paso de carga de evidencia visual en el formulario de denuncia" width="1600" height="760" loading="lazy"></div><figcaption class="caption">Carga de evidencia visual en el recorrido de denuncia.</figcaption></figure>
+        <figure class="g-5"><div class="project-image"><img src="img/conectahuellas/pantalla-donaciones.jpg" alt="Pasos y destinos propuestos para las donaciones" width="1600" height="1120" loading="lazy"></div><figcaption class="caption">Propuesta de información sobre el proceso de donación.</figcaption></figure>
+        <figure class="g-12"><div class="project-image"><img src="img/conectahuellas/pantalla-fundaciones.jpg" alt="Ejemplo de ficha de una fundación de rescate animal" width="1600" height="965" loading="lazy"></div><figcaption class="caption">Ficha de ejemplo para presentar fundaciones de rescate.</figcaption></figure>
+        <figure class="g-6"><div class="project-image"><img src="img/conectahuellas/wireframe-escritorio-01.jpg" alt="Tres wireframes originales de escritorio para inicio, información ciudadana y módulos principales" loading="lazy"></div><figcaption class="caption">Wireframes de escritorio: inicio, información y módulos · p. 64.</figcaption></figure>
+        <figure class="g-6"><div class="project-image"><img src="img/conectahuellas/wireframe-movil.jpg" alt="Seis wireframes originales de pantallas móviles con navegación, denuncia y módulos de contenido" loading="lazy"></div><figcaption class="caption">Wireframes móviles: seis pantallas propuestas · p. 66.</figcaption></figure>
       </div>
-      <div class="conecta-maps__grid">
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/mapa-empatia-vecina.jpg" alt="Mapa de empatía de Catalina Sánchez, perfil de una vecina que desea denunciar con seguridad" loading="lazy">
-          <figcaption><strong>Catalina Sánchez</strong><span>Vecina · necesidad de orientación y anonimato</span></figcaption>
-        </figure>
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/mapa-empatia-compradora.jpg" alt="Mapa de empatía de Catalina Pérez, perfil de una potencial compradora de mascotas" loading="lazy">
-          <figcaption><strong>Catalina Pérez</strong><span>Potencial adoptante · necesidad de información</span></figcaption>
-        </figure>
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/mapa-empatia-rescatista.jpg" alt="Mapa de empatía de Daniela Morales, perfil de una rescatista que necesita coordinación" loading="lazy">
-          <figcaption><strong>Daniela Morales</strong><span>Rescatista · necesidad de coordinación</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="conecta-section conecta-section--flow" data-bg="blue" aria-labelledby="conecta-flow-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">03 <span>—</span> Experiencia</p>
-        <h2 id="conecta-flow-title">De una alerta a una derivación.</h2>
-        <p class="conecta-section__intro">El informe plantea un recorrido de denuncia y coordinación entre ciudadanía, fundaciones y organismos competentes.</p>
-      </header>
-      <ol class="conecta-flow">
-        <li><span>01</span><h3>Reportar</h3><p>La persona entrega información de una posible situación de riesgo.</p></li>
-        <li><span>02</span><h3>Evaluar</h3><p>La propuesta contempla una revisión inicial por parte de una organización de rescate.</p></li>
-        <li><span>03</span><h3>Derivar</h3><p>Según el caso, se considera coordinar apoyo con rescatistas, municipio u organismos pertinentes.</p></li>
-      </ol>
-      <p class="conecta-note conecta-note--light">Este recorrido describe la propuesta del informe. No implica que el servicio esté activo ni que haya sido validado formalmente con integrantes de la fundación.</p>
-    </section>
-
-    <section class="conecta-section conecta-section--wireframes" data-bg="beige" aria-labelledby="conecta-wireframes-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">04 <span>—</span> Estructura</p>
-        <h2 id="conecta-wireframes-title">Primero, ordenar la experiencia.</h2>
-        <p class="conecta-section__intro">Wireframes originales para navegador y celular. Muestran jerarquía y módulos antes de aplicar la interfaz visual.</p>
-      </header>
-      <div class="conecta-wireframes">
-        <figure class="conecta-wireframe">
-          <img src="img/conectahuellas/wireframe-escritorio-01.jpg" alt="Tres wireframes originales de escritorio para inicio, información ciudadana y módulos principales" loading="lazy">
-          <figcaption><strong>Versión escritorio</strong><span>Inicio, información y módulos · p. 64</span></figcaption>
-        </figure>
-        <figure class="conecta-wireframe conecta-wireframe--mobile">
-          <img src="img/conectahuellas/wireframe-movil.jpg" alt="Seis wireframes originales de pantallas móviles con navegación, denuncia y módulos de contenido" loading="lazy">
-          <figcaption><strong>Versión móvil</strong><span>Seis pantallas propuestas · p. 66</span></figcaption>
-        </figure>
-      </div>
-      <p class="conecta-note">Los wireframes incluyen módulos conceptuales; adopción y donaciones se presentan como ideas para etapas futuras.</p>
-    </section>
-
-    <section class="conecta-section conecta-section--interface" id="conecta-interfaz" data-bg="white" aria-labelledby="conecta-interface-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">05 <span>—</span> Diseño de interfaz</p>
-        <h2 id="conecta-interface-title">Una propuesta visual cercana y clara.</h2>
-        <p class="conecta-section__intro">Las pantallas finales priorizan navegación directa, información legible y acceso a los recorridos principales.</p>
-      </header>
-      <div class="conecta-interface__grid">
-        <figure class="conecta-interface-card conecta-interface-card--large">
-          <img src="img/conectahuellas/interfaz-final-denuncia-fundaciones.jpg" alt="Pantallas propuestas de adopción, formulario de denuncia y perfil de una fundación en ConectaHuellas" loading="lazy">
-          <figcaption><strong>Denuncia y redes de apoyo</strong><span>Propuesta de navegación · p. 72</span></figcaption>
-        </figure>
-        <figure class="conecta-interface-card">
-          <img src="img/conectahuellas/interfaz-final-informacion-contacto.jpg" alt="Propuesta de las secciones informativas y de contacto de ConectaHuellas" loading="lazy">
-          <figcaption><strong>Información y contacto</strong><span>Propuesta de interfaz · p. 73</span></figcaption>
-        </figure>
-      </div>
-      <p class="conecta-note">Las pantallas son propuestas del informe, no un sitio desplegado. Textos, métricas, fichas y datos de contacto visibles son contenido de muestra; adopción y donaciones se consideran futuras.</p>
-    </section>
-
-    <section class="conecta-section conecta-section--identity" data-bg="beige" aria-labelledby="conecta-identity-title">
-      <header class="conecta-section__head">
-        <p class="conecta-kicker">06 <span>—</span> Sistema visual</p>
-        <h2 id="conecta-identity-title">Una identidad amable y reconocible.</h2>
-        <p class="conecta-section__intro">El sistema combina una paleta cálida, tipografía expresiva e iconografía para diferenciar los módulos de la plataforma.</p>
-      </header>
-      <div class="conecta-identity__grid">
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/identidad-logo-paleta.jpg" alt="Logotipo, isotipo y paleta cromática originales de ConectaHuellas" loading="lazy">
-          <figcaption><strong>Logotipo y color</strong><span>Identidad documentada · p. 61</span></figcaption>
-        </figure>
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/identidad-tipografia-iconos.jpg" alt="Muestras originales de tipografía e iconografía de ConectaHuellas" loading="lazy">
-          <figcaption><strong>Tipografía e iconografía</strong><span>Lilita One y Nunito · p. 62</span></figcaption>
-        </figure>
-        <figure class="conecta-artifact">
-          <img src="img/conectahuellas/sistema-componentes-ui.jpg" alt="Sistema de iconos, módulos y tipografía de la interfaz de ConectaHuellas" loading="lazy">
-          <figcaption><strong>Componentes UI</strong><span>Módulos y elementos · p. 67</span></figcaption>
-        </figure>
-      </div>
-      <p class="conecta-note">El informe señala que los iconos aún requerían pruebas de usabilidad antes de una posible implementación.</p>
-    </section>
-
-    <section class="conecta-credits" data-bg="white" aria-labelledby="conecta-credits-title">
-      <p class="conecta-kicker">07 <span>—</span> Créditos</p>
-      <h2 id="conecta-credits-title">Un proyecto colaborativo.</h2>
-      <p>Diseño y desarrollo del proyecto</p>
-      <strong>Alinette Galdames <span aria-hidden="true">+</span> Constanza Díaz</strong>
     </section>
 
     <section class="case-next case-next--return" data-bg="blue">

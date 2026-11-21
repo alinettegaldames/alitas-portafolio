@@ -13,11 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project-editorial.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <!-- "case--chancho" = estilos propios de este caso (carátula + lista de pistas) -->
-<body class="case case--chancho is-entering">
+<body class="case case--chancho case-editorial project-template is-entering">
 
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -52,27 +53,29 @@
 
 
   <main id="contenido">
-    <section class="case-hero" data-bg="white">
+    <section class="project-header" data-bg="white">
       <div class="case-hero__top reveal-fade">
         <a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a>
       </div>
-      <div class="chancho-heading">
-        <h1 class="case-title">Remasterización<br>de vinilo</h1>
-        <img class="chancho-heading__logo chancho-logo-spin" src="img/chancho-en-piedra/logotipo-chancho.png" alt="Logotipo de Chancho en Piedra">
+      <div class="project-header__heading">
+        <div><p class="project-header__meta">Branding · Identidad visual</p><h1>Chancho en Piedra</h1></div>
+        <div class="project-header__mark"><img class="chancho-logo-spin" src="img/chancho-en-piedra/logotipo-chancho.png" alt="Logotipo de Chancho en Piedra"></div>
       </div>
-      <p class="case-collaborators"><span>Colaboradores:</span> Constanza Díaz y Alinette Galdames</p>
-      <p class="case-hero__description">Una propuesta de diseño para la remasterización en vinilo de <em>República Marrana</em>, de Chancho en Piedra. La carátula, las ilustraciones y las piezas gráficas acompañan la música con un universo visual lleno de color y personajes.</p>
+      <p class="project-header__description">Diseño para la remasterización en vinilo de <em>República Marrana</em>.</p>
+      <p class="project-header__team"><strong>Colaboradores:</strong> Constanza Díaz y Alinette Galdames</p>
+      <details class="project-details"><summary>Más sobre el proyecto</summary><div class="project-details__content"><h2>La música en una nueva edición.</h2><p>Una propuesta de diseño para la remasterización en vinilo de <em>República Marrana</em>, de Chancho en Piedra. La carátula, las ilustraciones y las piezas gráficas acompañan la música con un universo visual lleno de color y personajes.</p><h3>Objetivo y enfoque</h3><p>La propuesta articula carátula, vinilo y piezas gráficas mediante ilustraciones y una identidad visual compartida.</p></div></details>
     </section>
 
-    <section class="case-section" data-bg="white">
+    <section class="project-gallery" data-bg="white" aria-labelledby="galeria-titulo">
+      <header class="project-gallery__head"><h2 id="galeria-titulo">Galería</h2><p>Vinilo, ilustraciones y piezas gráficas.</p></header>
       <div class="gallery">
         <figure class="g-6">
           <div class="media media--1x1 media--contain reveal-img hover-zoom"><img src="img/chancho-en-piedra/caratula-fondo-blanco.png" alt="Carátula ilustrada de República Marrana junto al vinilo"></div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Carátula de República Marrana junto al vinilo.</figcaption>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Carátula ilustrada de República Marrana junto al vinilo.</figcaption>
         </figure>
         <figure class="g-6 g-push">
           <div class="media media--1x1 media--contain reveal-img hover-zoom"><img src="img/chancho-en-piedra/vinilo-fondo-blanco.png" alt="Vinilo y reverso de la funda de República Marrana con la lista de canciones"></div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Vinilo y reverso de la funda de República Marrana.</figcaption>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Vinilo y reverso de la funda con la lista de canciones.</figcaption>
         </figure>
         <figure class="g-12">
           <div class="media media--21x9 media--contain reveal-img hover-zoom"><img src="img/chancho-en-piedra/piezas-fondo-blanco.png" alt="Vinilo, funda desplegada, tarjetas y adhesivos de República Marrana"></div>
@@ -80,11 +83,11 @@
         </figure>
         <figure class="g-7">
           <div class="media media--4x3 reveal-img hover-zoom"><img src="img/chancho-en-piedra/edicion-fondo-blanco.png" alt="Carátula ilustrada de República Marrana junto a tarjetas y adhesivos"></div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Carátula ilustrada, tarjetas y adhesivos de República Marrana.</figcaption>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Carátula ilustrada, tarjetas y adhesivos.</figcaption>
         </figure>
         <figure class="g-5 g-push">
           <div class="media media--4x5 media--contain reveal-img hover-zoom"><img src="img/chancho-en-piedra/detalle-fondo-blanco.png" alt="Detalle de una pieza ilustrada de República Marrana con una frase y símbolos de colores"></div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Detalle de una pieza gráfica ilustrada de República Marrana.</figcaption>
+          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span> Detalle de una pieza gráfica ilustrada.</figcaption>
         </figure>
       </div>
     </section>

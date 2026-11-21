@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mindly — ALITAS · Alinette Galdames</title>
-  <meta name="description" content="Maqueta de presentación del proyecto Mindly.">
+  <meta name="description" content="Mindly: proyecto de diseño digital y UX/UI con pantallas de diseños, plantillas y calendario.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project-editorial.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="case case--portfolio-mockup is-entering">
+<body class="case case--mindly case-editorial project-template is-entering">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -34,52 +35,42 @@
     <p class="mobile-menu__foot">Ideas que dan alas</p>
   </div>
   <main id="contenido">
-    <section class="case-hero" data-bg="white">
+    <section class="project-header" data-bg="white">
       <div class="case-hero__top reveal-fade"><a href="index.html#proyectos" class="case-back"><span class="case-back__arrow">←</span> Todos los proyectos</a></div>
-      <h1 class="case-title">Mindly</h1>
-      <ul class="case-tags"><li>Diseño digital</li><li>UX/UI</li></ul>
-      <p class="case-collaborators"><span>Diseño y desarrollo del proyecto:</span> Alinette Galdames y Constanza Díaz</p>
-      <p class="case-hero__description">Maqueta de presentación. La descripción y el concepto se incorporarán cuando se integre el material.</p>
-    </section>
-    <section class="case-section" data-bg="white" aria-labelledby="mindly-concept-title">
-      <header class="case-section__head">
-        <h2 class="case-section__title" id="mindly-concept-title">Descripción y concepto</h2>
-        <p class="case-section__note">Sin documentación de proceso.</p>
-      </header>
-      <div class="gallery">
-        <div class="case-placeholder case-placeholder--text g-6">
-          <span class="case-placeholder__code">01 · DESCRIPCIÓN</span>
-          <p class="case-placeholder__title">Contenido pendiente de integrar</p>
-          <span class="case-placeholder__status">Texto del proyecto</span>
-        </div>
-        <div class="case-placeholder case-placeholder--text g-6">
-          <span class="case-placeholder__code">02 · CONCEPTO</span>
-          <p class="case-placeholder__title">Contenido pendiente de integrar</p>
-          <span class="case-placeholder__status">Texto del proyecto</span>
-        </div>
+      <div class="project-header__heading">
+        <div><p class="project-header__meta">Diseño digital · UX/UI</p><h1>Mindly</h1></div>
       </div>
+      <p class="project-header__description">Una propuesta digital que reúne diseños, plantillas y calendario.</p>
+      <p class="project-header__team"><strong>Colaboradores:</strong> Alinette Galdames y Constanza Díaz</p>
+      <details class="project-details"><summary>Más sobre el proyecto</summary><div class="project-details__content">
+        <h2 id="mindly-concept-title">Una mirada a Mindly.</h2>
+        <p>Una propuesta digital que reúne diseños, plantillas y calendario en una misma interfaz.</p>
+        <p>Mindly presenta un espacio visual para consultar diseños recientes, explorar plantillas y acceder a un calendario.</p>
+        <p>La interfaz combina una navegación lateral con vistas de proyectos, formatos y recursos gráficos. Las imágenes muestran las pantallas compartidas del proyecto.</p>
+      </div></details>
     </section>
-    <section class="case-section" data-bg="beige" aria-labelledby="mindly-results-title">
-      <header class="case-section__head">
-        <h2 class="case-section__title" id="mindly-results-title">Resultados finales</h2>
-        <p class="case-section__note">Interfaces y piezas reales por incorporar.</p>
-      </header>
+    <section class="project-gallery" data-bg="white" aria-labelledby="mindly-results-title">
+      <header class="project-gallery__head"><h2 id="mindly-results-title">Galería</h2><p>Una selección de las interfaces de Mindly.</p></header>
       <div class="gallery">
-        <figure class="g-8">
-          <div class="case-placeholder case-placeholder--wide">
-            <span class="case-placeholder__code">03 · INTERFACES</span>
-            <span class="case-placeholder__title">Interfaz final</span>
-            <span class="case-placeholder__status">Material por integrar</span>
-          </div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span>Espacio reservado para interfaces finales.</figcaption>
+        <figure class="g-12">
+          <div class="project-image"><img src="img/mindly/inicio.png" alt="Pantalla de inicio de Mindly con diseños recientes y navegación lateral" fetchpriority="high"></div>
+          <figcaption class="caption">Pantalla de inicio de Mindly.</figcaption>
         </figure>
-        <figure class="g-4">
-          <div class="case-placeholder case-placeholder--square">
-            <span class="case-placeholder__code">04 · PIEZAS</span>
-            <span class="case-placeholder__title">Piezas y aplicaciones</span>
-            <span class="case-placeholder__status">Material por integrar</span>
-          </div>
-          <figcaption class="caption"><span class="caption__dot" aria-hidden="true"></span>Espacio reservado para resultados disponibles.</figcaption>
+        <figure class="g-6">
+          <div class="project-image"><img src="img/mindly/proyectos.png" alt="Vista de proyectos de Mindly con una colección de diseños" loading="lazy" decoding="async"></div>
+          <figcaption class="caption">Proyectos: colección visual de diseños recientes.</figcaption>
+        </figure>
+        <figure class="g-6">
+          <div class="project-image"><img src="img/mindly/nuevo.png" alt="Pantalla Nuevo de Mindly con formatos y plantillas para crear un diseño" loading="lazy" decoding="async"></div>
+          <figcaption class="caption">Nuevo diseño: formatos y plantillas disponibles.</figcaption>
+        </figure>
+        <figure class="g-7">
+          <div class="project-image"><img src="img/mindly/plantillas.png" alt="Galería de plantillas de Mindly organizada por formato" loading="lazy" decoding="async"></div>
+          <figcaption class="caption">Galería de plantillas y recursos visuales.</figcaption>
+        </figure>
+        <figure class="g-5">
+          <div class="project-image"><img src="img/mindly/calendario.png" alt="Pantalla de calendario de Mindly con una sección de notas" loading="lazy" decoding="async"></div>
+          <figcaption class="caption">Calendario acompañado por un espacio de notas.</figcaption>
         </figure>
       </div>
     </section>

@@ -27,7 +27,7 @@
 .editorial-object__status:empty { display: none; }
 .editorial-object__controls { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 1.25rem; }
 .editorial-object__controls button {
-  min-height: 2.8rem; border: 1px solid var(--azul); border-radius: 999px;
+  min-height: 2.8rem; border: 1px solid var(--azul); border-radius: var(--radius-organic);
   color: var(--azul); background: var(--blanco); font-weight: 700;
 }
 .editorial-object__controls button:hover:not(:disabled),
