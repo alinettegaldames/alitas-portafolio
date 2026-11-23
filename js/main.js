@@ -140,7 +140,6 @@ function setupThemes() {
    -------------------------------------------------------------------------- */
 function setupNav() {
   const nav = document.getElementById('nav');
-  const quickProjects = document.getElementById('quick-projects');
   let lastY = window.scrollY;
 
   window.addEventListener('scroll', () => {
@@ -152,13 +151,6 @@ function setupNav() {
     const goingDown = y > lastY;
     const menuOpen = document.body.classList.contains('menu-open');
     nav.classList.toggle('is-hidden', goingDown && y > 300 && !menuOpen);
-
-    if (quickProjects) {
-      const showQuickProjects = goingDown && y > 300 && !menuOpen;
-      quickProjects.classList.toggle('is-visible', showQuickProjects);
-      quickProjects.setAttribute('aria-hidden', String(!showQuickProjects));
-      quickProjects.inert = !showQuickProjects;
-    }
 
     lastY = y;
   }, { passive: true });
