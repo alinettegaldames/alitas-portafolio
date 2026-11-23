@@ -118,25 +118,20 @@
          ========================================================= -->
     <section class="hero" id="inicio" data-bg="white">
 
-      <div class="hero__meta">
-        <p class="hero__meta-item reveal-fade">ALITAS · Diseño + tecnología</p>
-        <p class="hero__meta-item reveal-fade">Estudiante de 4.º año · Diseño Gráfico · UNIACC</p>
-        <p class="hero__meta-item hero__meta-item--right reveal-fade">Santiago, Chile</p>
-      </div>
-
       <div class="hero__content">
         <h1 class="hero__title">
           <span class="line"><span>ALINETTE</span></span>
           <span class="line"><span><i class="hero__pill" aria-hidden="true"><b></b></i>GALDAMES</span></span>
         </h1>
         <p class="hero__role">Diseñadora multimedia</p>
-        <p class="hero__description">Diseño experiencias digitales, sistemas visuales e interfaces que conectan personas y tecnología.</p>
-        <ul class="hero__specialties" aria-label="Especialidades">
-          <li>UX/UI Design</li>
-          <li>Visual Identity</li>
-          <li>Interactive Design</li>
-          <li>Creative Technology</li>
-        </ul>
+        <p class="hero__location">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="2.5"></circle>
+          </svg>
+          <span>Santiago, Chile</span>
+        </p>
+        <p class="hero__description">Diseño experiencias digitales e identidades visuales que conectan personas y tecnología.</p>
         <div class="hero__actions">
           <a class="hero__button hero__button--primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↘</span></a>
           <a class="hero__button hero__button--secondary" href="#contacto">Contactarme <span aria-hidden="true">↗</span></a>
@@ -148,21 +143,23 @@
       </div>
 
       <figure class="hero__media">
-        <div class="hero-art" id="hero-art" tabindex="0" role="group" aria-label="Composición de herramientas creativas" aria-describedby="hero-art-help">
+        <div class="hero-art">
           <img class="hero-art__portrait" src="img/alinette-hero.png" alt="Alinette trabajando en su computador" width="1152" height="768">
-          <div class="hero-art__items" aria-hidden="true">
-            <span class="hero-art__item hero-art__item--ai"><span class="hero-art__file"><b>Ai</b><small>Illustrator</small></span></span>
-            <span class="hero-art__item hero-art__item--ps"><span class="hero-art__file"><b>Ps</b><small>Photoshop</small></span></span>
-            <span class="hero-art__item hero-art__item--id"><span class="hero-art__file"><b>Id</b><small>InDesign</small></span></span>
-            <span class="hero-art__item hero-art__item--figma"><span class="hero-art__file"><b>Fi</b><small>Figma</small></span></span>
-            <span class="hero-art__item hero-art__item--code"><span class="hero-art__file"><b>&lt;/&gt;</b><small>VS Code</small></span></span>
-            <span class="hero-art__item hero-art__item--chatgpt"><span class="hero-art__file"><b>✳</b><small>ChatGPT</small></span></span>
-            <span class="hero-art__item hero-art__item--claude"><span class="hero-art__file"><b>✦</b><small>Claude</small></span></span>
-            <span class="hero-art__item hero-art__item--github"><span class="hero-art__file"><b>GH</b><small>GitHub</small></span></span>
-            <span class="hero-art__item hero-art__item--copilot"><span class="hero-art__file"><b>✧</b><small>GitHub Copilot</small></span></span>
-          </div>
+          <ul class="hero-art__labels" aria-label="Áreas de interés y herramientas">
+            <li class="hero-art__tag hero-art__tag--area hero-art__tag--blue hero-art__tag--ux">UX/UI</li>
+            <li class="hero-art__tag hero-art__tag--area hero-art__tag--orange hero-art__tag--branding">Branding</li>
+            <li class="hero-art__tag hero-art__tag--area hero-art__tag--beige hero-art__tag--packaging">Packaging</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--white hero-art__tag--figma">Figma</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--orange hero-art__tag--illustrator">Adobe Illustrator</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--blue hero-art__tag--photoshop">Adobe Photoshop</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--beige hero-art__tag--canva">Canva</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--white hero-art__tag--procreate">Procreate</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--orange hero-art__tag--javascript">JavaScript</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--blue hero-art__tag--html">HTML</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--beige hero-art__tag--css">CSS</li>
+            <li class="hero-art__tag hero-art__tag--tool hero-art__tag--white hero-art__tag--python">Python</li>
+          </ul>
         </div>
-        <figcaption class="hero-art__help" id="hero-art-help">Pasa el cursor, enfoca con el teclado o toca la composición para mover las herramientas.</figcaption>
       </figure>
 
     </section>
@@ -343,7 +340,7 @@
 
         <!-- Proyecto adicional existente — ALITAS editorial -->
         <article class="project" data-project-category="editorial">
-          <a href="alitas-editorial.html" class="project__link" aria-label="Ver proyecto ALITAS editorial">
+          <div class="project__preview">
             <figure class="project__media reveal-img">
               <img class="project-preview__image" src="assets/editorial/pages/pagina-01.jpg" alt="Portada del portafolio editorial ALITAS">
             </figure>
@@ -351,12 +348,9 @@
               <h3 class="project__name">ALITAS editorial</h3>
               <p class="project__cat">Editorial · Diseño editorial</p>
               <p class="project__desc">Un recorrido por mi portafolio editorial, página por página.</p>
-              <span class="project__cta" aria-hidden="true">
-                <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
-                <span class="project__cta-arrow">→</span>
-              </span>
+              <span class="project__status">Próximamente</span>
             </div>
-          </a>
+          </div>
         </article>
 
         <!-- Proyecto AGX -->
@@ -368,7 +362,7 @@
             <div class="project__info">
               <h3 class="project__name">AGX</h3>
               <p class="project__cat">UX/UI · Plataforma web</p>
-              <p class="project__desc">Colaboradores: Alinette Galdames y Jairo Álvarez.</p>
+              <p class="project__desc">Diagnóstico y mejoras para plataformas digitales existentes.</p>
               <span class="project__cta" aria-hidden="true">
                 <span class="project__cta-text" data-hover="Entrar al caso">Ver caso</span>
                 <span class="project__cta-arrow">→</span>
