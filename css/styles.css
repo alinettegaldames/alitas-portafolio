@@ -582,7 +582,7 @@ body[data-theme="blue"]:not(.menu-open) .nav__toggle:focus-visible { background:
 }
 .hero__title {
   margin: 0 0 1.5rem;
-  font-size: clamp(3.1rem, 7.3vw, 8.5rem);
+  font-size: clamp(3.1rem, 6.5vw, 8.5rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: .82;
@@ -1090,7 +1090,7 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
     row-gap: 1.5rem;
   }
   .hero__content { grid-column: 1; grid-row: 1; padding: .5rem 0 0; }
-  .hero__title { margin-bottom: 1.15rem; font-size: clamp(2.2rem, 11.5vw, 5rem); }
+  .hero__title { margin-bottom: 1.15rem; font-size: clamp(2rem, 9vw, 4.5rem); }
   .hero__pill { width: .58em; height: .38em; }
   .hero__role { font-size: .82rem; }
   .hero__description { max-width: 38rem; font-size: 1rem; }
