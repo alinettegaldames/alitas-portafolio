@@ -358,6 +358,10 @@ body.case--cinefilo:not([data-theme]) .nav__logo-img,
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
 }
+/* Sobre el fondo azul, la navegación mantiene texto blanco de alto contraste. */
+body[data-theme="blue"] .nav { color: var(--blanco); }
+body[data-theme="blue"] .nav.is-scrolled { background: var(--azul); }
+body[data-theme="blue"] .nav__link span::after { color: var(--naranjo); }
 
 .nav__inner { display: flex; align-items: center; gap: 2rem; }
 .nav__logo { margin-right: auto; display: flex; align-items: center; }
@@ -1068,6 +1072,33 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
 .footer__top:hover,
 .footer__top:focus-visible { color: var(--naranjo); }
 
+/* Accesos rápidos a los proyectos al desplazarse por la página */
+.quick-projects {
+  position: fixed; z-index: 95; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom));
+  display: flex; align-items: center; gap: .4rem;
+  max-width: calc(100vw - 2rem); padding: .45rem;
+  overflow-x: auto; overscroll-behavior-inline: contain;
+  border: 1px solid rgba(35, 80, 159, .2); border-radius: 999px;
+  background: rgba(255, 255, 255, .97); color: var(--negro);
+  box-shadow: 0 .5rem 2rem rgba(20, 31, 50, .2);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translate(-50%, 1.5rem);
+  transition: opacity .25s ease, transform .25s var(--ease-out), visibility .25s;
+  scrollbar-width: none;
+}
+.quick-projects::-webkit-scrollbar { display: none; }
+.quick-projects.is-visible {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+.quick-projects a {
+  flex: 0 0 auto; padding: .6rem .85rem; border-radius: 999px;
+  color: var(--azul); font-family: var(--font-title); font-size: .75rem; font-weight: 800;
+  white-space: nowrap; transition: background-color .2s, color .2s;
+}
+.quick-projects a:hover,
+.quick-projects a:focus-visible { background: var(--azul); color: var(--blanco); outline: none; }
+
 
 /* ==========================================================================
    13. RESPONSIVE
@@ -1082,6 +1113,8 @@ html:not(.js) .statement__text mark { background-size: 100% 0.18em; }
 /* --- Celular (hasta 760px) --- */
 @media (max-width: 760px) {
   .nav__links, .nav__cta { display: none; }
+  .quick-projects { gap: .2rem; max-width: calc(100vw - 1rem); padding: .35rem; }
+  .quick-projects a { padding: .55rem .68rem; font-size: .68rem; }
   .nav__toggle { display: block; }
 
   .hero {
