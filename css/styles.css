@@ -596,7 +596,7 @@ body[data-theme="blue"]:not(.menu-open) .nav__toggle:focus-visible { background:
   margin: 0 0 1.5rem;
   font-size: clamp(3.1rem, 7.3vw, 8.5rem);
   font-weight: 800;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.025em;
   line-height: .82;
   pointer-events: none;
 }
